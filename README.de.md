@@ -37,7 +37,7 @@ Ich möchte keine selbstsichere falsche Antwort geben, deshalb sagt das Werkzeug
 | Zur Sichtlinie wechseln                  | Ein Profil zwischen zwei Punkten, mit dem Grat, der die Sicht versperrt                                      |
 | Die Seite teilen                         | Ein Link, der Ort, Blickrichtung, Reichweite und Zeitpunkt enthält                                           |
 
-Die Gipfel stammen aus OpenStreetMap über fünf Overpass-Spiegel. Antwortet keiner, springt eine mitgelieferte Liste mit 35.621 Gipfeln über 1800 m ein, sodass weiterhin Labels erscheinen.
+Die Gipfel stammen aus OpenStreetMap über vier Overpass-Spiegel. Antwortet keiner, springt eine mitgelieferte Liste mit 35.621 Gipfeln über 1800 m ein, sodass weiterhin Labels erscheinen.
 
 ## Ausprobieren
 

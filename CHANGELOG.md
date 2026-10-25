@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Fixed missing peak names outside Switzerland. One Overpass mirror only holds Swiss data and answered with an empty list for other places, which was accepted and kept. That mirror is no longer used, an answer with no peaks falls back to the bundled list and is not stored, and the stored answers from 0.1.0 are cleared. The default Tokyo view now labels Mount Fuji.
+
 ## 0.1.0
 
 First release.

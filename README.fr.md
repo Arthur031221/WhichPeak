@@ -37,7 +37,7 @@ Je ne veux pas donner une réponse fausse avec aplomb, alors quand l'outil hési
 | Passer en ligne de vue              | Un profil entre deux points, avec la crête qui bloque la vue                                                        |
 | Partager la page                    | Un lien qui garde le lieu, la vue, la portée et le moment                                                           |
 
-Les sommets viennent d'OpenStreetMap par cinq miroirs Overpass. Si aucun ne répond, une liste intégrée de 35 621 sommets au-dessus de 1800 m prend le relais, de sorte que les étiquettes apparaissent toujours.
+Les sommets viennent d'OpenStreetMap par quatre miroirs Overpass. Si aucun ne répond, une liste intégrée de 35 621 sommets au-dessus de 1800 m prend le relais, de sorte que les étiquettes apparaissent toujours.
 
 ## Essayer
 

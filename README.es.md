@@ -37,7 +37,7 @@ No quiero dar una respuesta equivocada con total seguridad, así que cuando la h
 | Cambiar a línea de visión             | Un perfil entre dos puntos, con la cresta que bloquea la vista                                      |
 | Compartir la página                   | Un enlace que guarda el lugar, la vista, el alcance y el momento                                    |
 
-Las cimas vienen de OpenStreetMap a través de cinco réplicas de Overpass. Si ninguna responde, toma el relevo una lista incluida de 35 621 cumbres por encima de 1800 m, de modo que las etiquetas siguen apareciendo.
+Las cimas vienen de OpenStreetMap a través de cuatro réplicas de Overpass. Si ninguna responde, toma el relevo una lista incluida de 35 621 cumbres por encima de 1800 m, de modo que las etiquetas siguen apareciendo.
 
 ## Pruébalo
 

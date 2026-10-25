@@ -20,7 +20,7 @@ _Which peak is that? Stand anywhere, get a labeled 360 degree panorama._
 
 WhichPeak draws what you'd see from a point on Earth and names the mountains. It reads open elevation tiles, adds earth curvature and refraction, shades the terrain with the real sun for the hour you pick, and labels every summit that's actually visible. It runs in the browser. No server, no account, and your photos never leave your device.
 
-I didn't want to hand out a confident wrong answer, so when the tool is unsure it says so. A weak photo match gets reported as a weak match.
+I didn't want the tool giving a confident wrong answer, so when it's unsure it says so. A weak photo match gets reported as a weak match.
 
 ## Why I built it
 
@@ -37,7 +37,7 @@ I didn't want to hand out a confident wrong answer, so when the tool is unsure i
 | Switch to line of sight   | A chart of the profile between two points, with the ridge that blocks it                      |
 | Share the page            | A link that holds the place, view, range and moment                                           |
 
-Peaks come from OpenStreetMap through five Overpass mirrors. If none answers, a bundled list of 35,621 summits above 1800 m takes over, so labels still show up.
+Peaks come from OpenStreetMap through four Overpass mirrors. If none answers, a bundled list of 35,621 summits above 1800 m takes over, so labels still show up.
 
 ## Try it
 
@@ -68,7 +68,7 @@ More detail is in [docs/install.md](docs/install.md).
 
 ## How far to trust it
 
-I checked curvature and refraction hardest. A line of sight tool that's off by a few metres is wrong about whether a peak is visible, so I tested it against two sightlines people have documented.
+Curvature and refraction got the most checking. A line of sight tool that's off by a few metres is wrong about whether a peak is visible, so I tested it against two sightlines people have documented.
 
 | Sightline                          | Distance | Result at the average refraction (k = 0.13) |
 | ---------------------------------- | -------- | ------------------------------------------- |

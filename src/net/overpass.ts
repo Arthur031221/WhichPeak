@@ -4,7 +4,6 @@ import { bundledPeaks } from "./bundled";
 
 const ENDPOINTS = [
   "https://overpass-api.de/api/interpreter",
-  "https://overpass.osm.ch/api/interpreter",
   "https://overpass.kumi.systems/api/interpreter",
   "https://overpass.openstreetmap.fr/api/interpreter",
   "https://overpass.private.coffee/api/interpreter",
@@ -17,7 +16,9 @@ const HEDGE_DELAY = 4_000;
 const MAX_PARALLEL = 2;
 /** The bundled list starts loading when OpenStreetMap is this slow, so there is something to show. */
 const INTERIM_AFTER = 6_000;
-const CACHE_NAME = "whichpeak-peaks-v1";
+const CACHE_NAME = "whichpeak-peaks-v2";
+/** Earlier versions cached answers from a mirror that only covers Switzerland, so they are dropped. */
+const OLD_CACHES = ["whichpeak-peaks-v1"];
 
 export function boundsAround(lat: number, lon: number, radiusM: number): Bounds {
   return {
@@ -48,6 +49,14 @@ async function cached(key: string): Promise<Peak[] | null> {
     return hit ? ((await hit.json()) as Peak[]) : null;
   } catch {
     return null;
+  }
+}
+
+async function forgetOldCaches(): Promise<void> {
+  try {
+    for (const name of OLD_CACHES) await caches.delete(name);
+  } catch {
+    // No Cache API here, so there is nothing to clear.
   }
 }
 
@@ -128,6 +137,7 @@ export async function fetchPeaks(
   onInterim?: (r: PeakResult) => void,
 ): Promise<PeakResult> {
   const key = `https://whichpeak.invalid/peaks/${lat.toFixed(2)}/${lon.toFixed(2)}/${Math.round(rangeM / 1000)}`;
+  void forgetOldCaches();
   const hit = await cached(key);
   if (hit) return { peaks: hit, source: "osm" };
   let done = false;
@@ -139,6 +149,9 @@ export async function fetchPeaks(
   }, INTERIM_AFTER);
   try {
     const peaks = await fromOverpass(lat, lon, rangeM, signal);
+    // A mirror that answers with no peaks at all has not seen this area, so it is neither trusted nor kept.
+    if (peaks.length === 0)
+      return { peaks: await bundledPeaks(lat, lon, rangeM, signal), source: "bundled" };
     await remember(key, peaks);
     return { peaks, source: "osm" };
   } catch (err) {

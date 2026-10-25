@@ -37,7 +37,7 @@ Não quero dar uma resposta errada com toda a confiança, então quando a ferram
 | Trocar para linha de visada         | Um perfil entre dois pontos, com a crista que bloqueia a vista                                         |
 | Compartilhar a página               | Um link que guarda o lugar, a vista, o alcance e o momento                                             |
 
-Os picos vêm do OpenStreetMap por cinco espelhos do Overpass. Se nenhum responder, uma lista embutida com 35.621 cumes acima de 1800 m assume, e os rótulos continuam aparecendo.
+Os picos vêm do OpenStreetMap por quatro espelhos do Overpass. Se nenhum responder, uma lista embutida com 35.621 cumes acima de 1800 m assume, e os rótulos continuam aparecendo.
 
 ## Experimente
 

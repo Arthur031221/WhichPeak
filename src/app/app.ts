@@ -393,7 +393,8 @@ export class App {
       this.peakSource = r.source;
       await this.evaluate(seq);
       if (seq !== this.loadSeq) return;
-      if (r.source === "bundled") this.flash(this.t("status.peaksBundled"), 0);
+      if (r.source === "bundled" && r.peaks.length > 0)
+        this.flash(this.t("status.peaksBundled"), 0);
       else $("#status-chip").hidden = true;
     };
     const peaksPromise = fetchPeaks(s.lat, s.lon, s.range * 1000, signal, (r) => {

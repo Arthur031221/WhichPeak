@@ -32,7 +32,7 @@ The sweep runs in `src/worker/scene.worker.ts`, so the page stays responsive. Wh
 
 ## Peaks
 
-`src/net/overpass.ts` asks five Overpass mirrors, each with a 12 second timeout. A second mirror starts after 4 seconds if the first has not answered, never more than two run at once, and the first good answer wins, and stores results in the Cache API under `whichpeak-peaks-v1`. If OpenStreetMap is slow, the bundled list in `public/data/peaks.json` (Wikidata, CC0, peaks from 1800 m up) is shown after 6 seconds and is the last fallback.
+`src/net/overpass.ts` asks four Overpass mirrors, each with a 12 second timeout. A second mirror starts after 4 seconds if the first has not answered, never more than two run at once, and the first good answer wins, and stores results in the Cache API under `whichpeak-peaks-v2`. An answer with no peaks at all is not trusted or stored, and the bundled list is used instead. If OpenStreetMap is slow, the bundled list in `public/data/peaks.json` (Wikidata, CC0, peaks from 1800 m up) is shown after 6 seconds and is the last fallback.
 
 `src/core/visibility.ts` compares the summit's elevation angle with the largest slope of the terrain in front of it, up to two cells short of the summit, with a small tolerance. `src/core/labels.ts` places labels by priority so they do not overlap, and moves the losers up into free rows with a stem to the summit.
 

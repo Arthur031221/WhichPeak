@@ -70,7 +70,7 @@ describe("fetchPeaks", () => {
     expect(result.source).toBe("bundled");
     expect(result.peaks).toHaveLength(2);
     const mirrors = fetchMock.mock.calls.filter(([u]) => !String(u).includes("peaks.json"));
-    expect(mirrors).toHaveLength(5);
+    expect(mirrors).toHaveLength(4);
   });
 
   it("uses the next mirror when the first one fails", async () => {
@@ -103,6 +103,56 @@ describe("fetchPeaks", () => {
     const result = await fetchPeaks(46.5, 8.0, 50_000);
     expect(result.peaks.map((p) => p.id)).toEqual([7]);
     expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it("never asks the Swiss only mirror, which answers empty outside Switzerland", async () => {
+    const fetchMock = vi.fn(async (url: string | URL | Request) =>
+      String(url).includes("peaks.json") ? json(ROWS) : json({}, 502),
+    );
+    vi.stubGlobal("fetch", fetchMock);
+    const { fetchPeaks } = await import("../src/net/overpass");
+    await fetchPeaks(46.5, 8.0, 50_000);
+    expect(fetchMock.mock.calls.some(([u]) => String(u).includes("overpass.osm.ch"))).toBe(false);
+  });
+
+  it("uses the bundled list instead of an empty answer and does not store it", async () => {
+    const put = vi.fn(async () => undefined);
+    vi.stubGlobal("caches", {
+      open: async () => ({ match: async () => undefined, put }),
+      delete: async () => true,
+    });
+    const fetchMock = vi.fn(async (url: string | URL | Request) =>
+      String(url).includes("peaks.json") ? json(ROWS) : json({ elements: [] }),
+    );
+    vi.stubGlobal("fetch", fetchMock);
+    const { fetchPeaks } = await import("../src/net/overpass");
+    const result = await fetchPeaks(46.5, 8.0, 50_000);
+    expect(result.source).toBe("bundled");
+    expect(result.peaks).toHaveLength(2);
+    expect(put).not.toHaveBeenCalled();
+  });
+
+  it("stores a real answer and clears the first cache version", async () => {
+    const put = vi.fn(async () => undefined);
+    const dropped: string[] = [];
+    vi.stubGlobal("caches", {
+      open: async () => ({ match: async () => undefined, put }),
+      delete: async (name: string) => dropped.push(name) > 0,
+    });
+    const osm = {
+      elements: [
+        { type: "node", id: 7, lat: 46.5, lon: 8.0, tags: { name: "Gamma", ele: "3000" } },
+      ],
+    };
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => json(osm)),
+    );
+    const { fetchPeaks } = await import("../src/net/overpass");
+    const result = await fetchPeaks(46.5, 8.0, 50_000);
+    expect(result.source).toBe("osm");
+    expect(put).toHaveBeenCalledTimes(1);
+    expect(dropped).toEqual(["whichpeak-peaks-v1"]);
   });
 
   it("starts the next mirror while a slow one is still waiting", async () => {

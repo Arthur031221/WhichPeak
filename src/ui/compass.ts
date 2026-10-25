@@ -8,10 +8,12 @@ interface OrientationEvent extends DeviceOrientationEvent {
 
 type PermissionApi = { requestPermission?: () => Promise<"granted" | "denied"> };
 
+const EVENTS = ["deviceorientationabsolute", "deviceorientation"];
+
 /** Turns the phone's compass into a stream of headings, smoothed so the view does not shake. */
 export class CompassFollower {
   private heading: number | null = null;
-  private listening: string | null = null;
+  private listening = false;
 
   constructor(private readonly onHeading: (deg: number) => void) {}
 
@@ -21,7 +23,7 @@ export class CompassFollower {
   }
 
   get active(): boolean {
-    return this.listening !== null;
+    return this.listening;
   }
 
   async start(waitMs = 2000): Promise<Outcome> {
@@ -47,16 +49,18 @@ export class CompassFollower {
         this.onHeading(this.heading);
       };
     });
-    window.addEventListener(type, this.handler);
-    this.listening = type;
+    // Chrome reports the true compass on its own event, Safari on the plain one. A reading that
+    // is not tied to north is skipped, so listening to both is safe.
+    for (const type of EVENTS) window.addEventListener(type, this.handler);
+    this.listening = true;
     if (await first) return "on";
     this.stop();
     return "none";
   }
 
   stop(): void {
-    if (this.listening) window.removeEventListener(this.listening, this.handler);
-    this.listening = null;
+    for (const type of EVENTS) window.removeEventListener(type, this.handler);
+    this.listening = false;
   }
 
   private handler: (e: Event) => void = () => {};

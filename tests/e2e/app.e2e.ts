@@ -175,27 +175,6 @@ describe("compass", () => {
     ).toBeLessThanOrEqual(0);
     await button.click();
     await turn(page, 90);
-    console.log(
-      "DEBUG",
-      await page.evaluate(() => {
-        const e = new DeviceOrientationEvent("deviceorientationabsolute", {
-          alpha: 90,
-          beta: 90,
-          gamma: 0,
-          absolute: true,
-        });
-        return JSON.stringify({
-          ua: navigator.userAgent,
-          rp: typeof (DeviceOrientationEvent as any).requestPermission,
-          abs: e.absolute,
-          alpha: e.alpha,
-          beta: e.beta,
-          wk: typeof (e as any).webkitCompassHeading,
-          status: document.querySelector("#status-chip")?.textContent,
-          hash: location.hash,
-        });
-      }),
-    );
     await expect
       .poll(() => page.evaluate(() => location.hash), { timeout: 5000 })
       .toContain("az=270");

@@ -70,7 +70,9 @@
   },
   "peaks": {
     "title": "Sommets visibles",
-    "empty": "Aucun sommet nommé en vue pour l'instant."
+    "empty": "Aucun sommet nommé en vue pour l'instant.",
+    "filter": "Chercher un sommet en vue",
+    "noMatch": "Aucun sommet visible ne correspond."
   },
   "card": {
     "visible": "Visible",
@@ -113,7 +115,8 @@
     "located": "Déplacé à votre position",
     "noGeo": "Ce navigateur n'a pas de service de localisation",
     "geoDenied": "L'accès à la position n'a pas été accordé",
-    "peaksBundled": "OpenStreetMap est surchargé, ces noms viennent donc de la liste intégrée des sommets notables."
+    "peaksBundled": "OpenStreetMap est surchargé, ces noms viennent donc de la liste intégrée des sommets notables.",
+    "peaksOffline": "Vous êtes hors ligne, ces noms viennent donc de la liste intégrée des sommets notables."
   },
   "error": {
     "terrain": {

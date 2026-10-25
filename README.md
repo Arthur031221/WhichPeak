@@ -20,7 +20,7 @@ _Which peak is that? Stand anywhere, get a labeled 360 degree panorama._
 
 WhichPeak draws what you'd see from a point on Earth and names the mountains. It reads open elevation tiles, adds earth curvature and refraction, shades the terrain with the real sun for the hour you pick, and labels every summit that's actually visible. It runs in the browser. No server, no account, and your photos never leave your device.
 
-I didn't want the tool giving a confident wrong answer, so when it's unsure it says so. A weak photo match gets reported as a weak match.
+I didn't want a tool that gives a confident wrong answer, so when it's unsure it says so. A weak photo match gets reported as a weak match.
 
 ## Why I built it
 
@@ -35,9 +35,11 @@ I didn't want the tool giving a confident wrong answer, so when it's unsure it s
 | Move the time slider      | Sun, haze and a snow line that follow the date and latitude                                   |
 | Click a label             | Elevation, distance, bearing, angle above the horizon and how far the peak clears the terrain |
 | Switch to line of sight   | A chart of the profile between two points, with the ridge that blocks it                      |
+| Type part of a name       | Every visible peak that matches, ready to turn toward                                         |
+| Open it with no signal    | The page and the terrain you already loaded, from the offline cache. It installs as an app    |
 | Share the page            | A link that holds the place, view, range and moment                                           |
 
-Peaks come from OpenStreetMap through four Overpass mirrors. If none answers, a bundled list of 35,621 summits above 1800 m takes over, so labels still show up.
+Peaks come from OpenStreetMap through three Overpass mirrors. If none answers, a bundled list of 35,621 summits above 1800 m takes over, so labels still show up.
 
 ## Try it
 
@@ -95,7 +97,7 @@ The interface comes in English, Traditional Chinese, Simplified Chinese, Japanes
 
 ## Contributing
 
-Bug reports and pull requests are welcome. [CONTRIBUTING.md](CONTRIBUTING.md) lists the checks to run first: 97 unit tests, 10 browser tests, type checking and a format check.
+Bug reports and pull requests are welcome. [CONTRIBUTING.md](CONTRIBUTING.md) lists the checks to run first: 105 unit tests, 12 browser tests, type checking and a format check.
 
 ## Credits
 

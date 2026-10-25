@@ -70,7 +70,9 @@
   },
   "peaks": {
     "title": "可见山峰",
-    "empty": "视野内还没有具名山峰。"
+    "empty": "视野内还没有具名山峰。",
+    "filter": "在视野中找山",
+    "noMatch": "没有符合的可见山峰。"
   },
   "card": {
     "visible": "可见",
@@ -113,7 +115,8 @@
     "located": "已移到你的位置",
     "noGeo": "这个浏览器没有定位服务",
     "geoDenied": "未获得定位权限",
-    "peaksBundled": "OpenStreetMap 目前繁忙，这些名称来自内置的知名山峰列表。"
+    "peaksBundled": "OpenStreetMap 目前繁忙，这些名称来自内置的知名山峰列表。",
+    "peaksOffline": "当前离线，这些名称来自内置的知名山峰列表。"
   },
   "error": {
     "terrain": {

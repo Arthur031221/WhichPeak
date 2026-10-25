@@ -70,7 +70,9 @@
   },
   "peaks": {
     "title": "보이는 산",
-    "empty": "시야에 이름 있는 산이 아직 없습니다."
+    "empty": "시야에 이름 있는 산이 아직 없습니다.",
+    "filter": "시야 속 산 찾기",
+    "noMatch": "일치하는 보이는 산이 없습니다."
   },
   "card": {
     "visible": "보임",
@@ -113,7 +115,8 @@
     "located": "내 위치로 이동했습니다",
     "noGeo": "이 브라우저에는 위치 서비스가 없습니다",
     "geoDenied": "위치 접근이 허용되지 않았습니다",
-    "peaksBundled": "OpenStreetMap이 바빠서, 이 이름들은 내장된 주요 산 목록에서 가져왔습니다."
+    "peaksBundled": "OpenStreetMap이 바빠서, 이 이름들은 내장된 주요 산 목록에서 가져왔습니다.",
+    "peaksOffline": "오프라인이라서, 이 이름들은 내장된 주요 산 목록에서 가져왔습니다."
   },
   "error": {
     "terrain": {

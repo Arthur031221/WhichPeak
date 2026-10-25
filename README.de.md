@@ -28,16 +28,18 @@ Ich möchte keine selbstsichere falsche Antwort geben, deshalb sagt das Werkzeug
 
 ## Was es erzeugt
 
-| Du tust das                              | WhichPeak liefert                                                                                            |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Einen Link öffnen oder eine Nadel setzen | Ein 360-Grad-Panorama bis 400 km, aus Kacheln in sechs Detailstufen aufgebaut                                |
-| Die Augenhöhe erhöhen                    | Die Aussicht von einem Turm oder Gipfel, mit einem Horizont, der sich senkt wie in Wirklichkeit              |
-| Den Zeitregler bewegen                   | Sonne, Dunst und Schneegrenze, die Datum und Breitengrad folgen                                              |
-| Auf ein Label klicken                    | Höhe, Entfernung, Peilung, Winkel über dem Horizont und wie weit der Gipfel das verdeckende Gelände überragt |
-| Zur Sichtlinie wechseln                  | Ein Profil zwischen zwei Punkten, mit dem Grat, der die Sicht versperrt                                      |
-| Die Seite teilen                         | Ein Link, der Ort, Blickrichtung, Reichweite und Zeitpunkt enthält                                           |
+| Du tust das                              | WhichPeak liefert                                                                                                |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Einen Link öffnen oder eine Nadel setzen | Ein 360-Grad-Panorama bis 400 km, aus Kacheln in sechs Detailstufen aufgebaut                                    |
+| Die Augenhöhe erhöhen                    | Die Aussicht von einem Turm oder Gipfel, mit einem Horizont, der sich senkt wie in Wirklichkeit                  |
+| Den Zeitregler bewegen                   | Sonne, Dunst und Schneegrenze, die Datum und Breitengrad folgen                                                  |
+| Auf ein Label klicken                    | Höhe, Entfernung, Peilung, Winkel über dem Horizont und wie weit der Gipfel das verdeckende Gelände überragt     |
+| Zur Sichtlinie wechseln                  | Ein Profil zwischen zwei Punkten, mit dem Grat, der die Sicht versperrt                                          |
+| Einen Teil eines Namens tippen           | Jeden sichtbaren Gipfel, der passt, mit einem Klick zum Hindrehen                                                |
+| Ohne Empfang öffnen                      | Die Seite und das Gelände, das du schon geladen hast, aus dem Offline-Cache. Sie lässt sich als App installieren |
+| Die Seite teilen                         | Ein Link, der Ort, Blickrichtung, Reichweite und Zeitpunkt enthält                                               |
 
-Die Gipfel stammen aus OpenStreetMap über vier Overpass-Spiegel. Antwortet keiner, springt eine mitgelieferte Liste mit 35.621 Gipfeln über 1800 m ein, sodass weiterhin Labels erscheinen.
+Die Gipfel stammen aus OpenStreetMap über drei Overpass-Spiegel. Antwortet keiner, springt eine mitgelieferte Liste mit 35.621 Gipfeln über 1800 m ein, sodass weiterhin Labels erscheinen.
 
 ## Ausprobieren
 
@@ -95,7 +97,7 @@ Die Oberfläche gibt es auf Englisch, Traditionellem Chinesisch, Vereinfachtem C
 
 ## Mitwirken
 
-Fehlerberichte und Pull Requests sind willkommen. [CONTRIBUTING.md](CONTRIBUTING.md) beschreibt die Prüfungen, die du zuerst ausführen solltest: 97 Unit-Tests, 10 Browser-Tests, Typprüfung und Formatprüfung.
+Fehlerberichte und Pull Requests sind willkommen. [CONTRIBUTING.md](CONTRIBUTING.md) beschreibt die Prüfungen, die du zuerst ausführen solltest: 105 Unit-Tests, 12 Browser-Tests, Typprüfung und Formatprüfung.
 
 ## Quellen
 

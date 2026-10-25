@@ -5,7 +5,6 @@ import { bundledPeaks } from "./bundled";
 const ENDPOINTS = [
   "https://overpass-api.de/api/interpreter",
   "https://overpass.kumi.systems/api/interpreter",
-  "https://overpass.openstreetmap.fr/api/interpreter",
   "https://overpass.private.coffee/api/interpreter",
 ];
 /** A mirror that has not answered by now is treated as down. */

@@ -35,9 +35,11 @@ Je ne veux pas donner une réponse fausse avec aplomb, alors quand l'outil hési
 | Déplacer le curseur d'heure         | Soleil, brume et limite des neiges qui suivent la date et la latitude                                               |
 | Cliquer sur une étiquette           | Altitude, distance, azimut, angle au-dessus de l'horizon et hauteur dont le sommet dépasse le terrain qui le masque |
 | Passer en ligne de vue              | Un profil entre deux points, avec la crête qui bloque la vue                                                        |
+| Taper un bout de nom                | Tous les sommets visibles qui correspondent, prêts à s'y tourner                                                    |
+| L'ouvrir sans réseau                | La page et le relief déjà chargé, depuis le cache hors ligne. Elle s'installe comme une application                 |
 | Partager la page                    | Un lien qui garde le lieu, la vue, la portée et le moment                                                           |
 
-Les sommets viennent d'OpenStreetMap par quatre miroirs Overpass. Si aucun ne répond, une liste intégrée de 35 621 sommets au-dessus de 1800 m prend le relais, de sorte que les étiquettes apparaissent toujours.
+Les sommets viennent d'OpenStreetMap par trois miroirs Overpass. Si aucun ne répond, une liste intégrée de 35 621 sommets au-dessus de 1800 m prend le relais, de sorte que les étiquettes apparaissent toujours.
 
 ## Essayer
 
@@ -95,7 +97,7 @@ L'interface existe en anglais, chinois traditionnel, chinois simplifié, japonai
 
 ## Contribuer
 
-Les rapports de bogues et les pull requests sont les bienvenus. [CONTRIBUTING.md](CONTRIBUTING.md) décrit les vérifications à passer d'abord : 97 tests unitaires, 10 tests de navigateur, vérification des types et du format.
+Les rapports de bogues et les pull requests sont les bienvenus. [CONTRIBUTING.md](CONTRIBUTING.md) décrit les vérifications à passer d'abord : 105 tests unitaires, 12 tests de navigateur, vérification des types et du format.
 
 ## Crédits
 

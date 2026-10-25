@@ -32,9 +32,15 @@ The sweep runs in `src/worker/scene.worker.ts`, so the page stays responsive. Wh
 
 ## Peaks
 
-`src/net/overpass.ts` asks four Overpass mirrors, each with a 12 second timeout. A second mirror starts after 4 seconds if the first has not answered, never more than two run at once, and the first good answer wins, and stores results in the Cache API under `whichpeak-peaks-v2`. An answer with no peaks at all is not trusted or stored, and the bundled list is used instead. If OpenStreetMap is slow, the bundled list in `public/data/peaks.json` (Wikidata, CC0, peaks from 1800 m up) is shown after 6 seconds and is the last fallback.
+`src/net/overpass.ts` asks three Overpass mirrors, each with a 12 second timeout. A second mirror starts after 4 seconds if the first has not answered, never more than two run at once, and the first good answer wins, and stores results in the Cache API under `whichpeak-peaks-v2`. An answer with no peaks at all is not trusted or stored, and the bundled list is used instead. If OpenStreetMap is slow, the bundled list in `public/data/peaks.json` (Wikidata, CC0, peaks from 1800 m up) is shown after 6 seconds and is the last fallback.
 
 `src/core/visibility.ts` compares the summit's elevation angle with the largest slope of the terrain in front of it, up to two cells short of the summit, with a small tolerance. `src/core/labels.ts` places labels by priority so they do not overlap, and moves the losers up into free rows with a stem to the summit.
+
+The bundled list is cleaned on the way out: `dropDuplicates` in `src/core/peaks.ts` drops a second record with the same name within 1.5 km, keeping the one with more translated names.
+
+## Offline
+
+`src/sw.js` is the service worker. `scripts/swPlugin.ts` copies it to `dist/sw.js` at build time and fills in the list of built scripts, styles and fonts to store at install, and a version taken from their hashed names. Page loads try the network and fall back to the stored page after 4 seconds, scripts and styles come from the cache first, and terrain tiles from AWS are kept in `whichpeak-tiles-v1`, newest 1000. Overpass lookups, Nominatim search and map tiles are not touched. The worker is registered only in a production build.
 
 ## Line of sight
 
@@ -50,4 +56,4 @@ The sweep runs in `src/worker/scene.worker.ts`, so the page stays responsive. Wh
 
 ## Tests
 
-Unit tests in `tests` cover each core module on synthetic terrain with sharp cones. The browser tests in `tests/e2e` start the built app, serve synthetic tiles and a fixture peak list through request routing, and check the panorama, the labels, the line of sight, photo mode and the language switcher.
+Unit tests in `tests` cover each core module on synthetic terrain with sharp cones. The browser tests in `tests/e2e` start the built app, serve synthetic tiles and a fixture peak list through request routing, and check the panorama, the labels, the peak filter, the line of sight, photo mode, the language switcher and, against a production build, that the page opens offline.

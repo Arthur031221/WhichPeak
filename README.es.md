@@ -35,9 +35,11 @@ No quiero dar una respuesta equivocada con total seguridad, así que cuando la h
 | Mover el control de hora              | Sol, bruma y una línea de nieve que siguen la fecha y la latitud                                    |
 | Pulsar una etiqueta                   | Altitud, distancia, rumbo, ángulo sobre el horizonte y cuánto supera la cima al terreno que la tapa |
 | Cambiar a línea de visión             | Un perfil entre dos puntos, con la cresta que bloquea la vista                                      |
+| Escribir parte de un nombre           | Todos los picos visibles que coinciden, listos para girar hacia ellos                               |
+| Abrirlo sin señal                     | La página y el terreno que ya cargaste, desde la caché sin conexión. Se instala como una app        |
 | Compartir la página                   | Un enlace que guarda el lugar, la vista, el alcance y el momento                                    |
 
-Las cimas vienen de OpenStreetMap a través de cuatro réplicas de Overpass. Si ninguna responde, toma el relevo una lista incluida de 35 621 cumbres por encima de 1800 m, de modo que las etiquetas siguen apareciendo.
+Las cimas vienen de OpenStreetMap a través de tres réplicas de Overpass. Si ninguna responde, toma el relevo una lista incluida de 35 621 cumbres por encima de 1800 m, de modo que las etiquetas siguen apareciendo.
 
 ## Pruébalo
 
@@ -95,7 +97,7 @@ La interfaz está en inglés, chino tradicional, chino simplificado, japonés, c
 
 ## Contribuir
 
-Se agradecen los informes de errores y los pull requests. [CONTRIBUTING.md](CONTRIBUTING.md) explica las comprobaciones que hay que pasar antes: 97 pruebas unitarias, 10 pruebas de navegador, comprobación de tipos y de formato.
+Se agradecen los informes de errores y los pull requests. [CONTRIBUTING.md](CONTRIBUTING.md) explica las comprobaciones que hay que pasar antes: 105 pruebas unitarias, 12 pruebas de navegador, comprobación de tipos y de formato.
 
 ## Créditos
 

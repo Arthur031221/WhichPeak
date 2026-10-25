@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0
+
+- The page works offline after one visit. A service worker keeps the page and the terrain tiles you already loaded, so a view you opened on the way up still draws on the summit with no signal. It can also be installed as an app, with proper icons.
+- A search box above the list of visible peaks. It finds any visible peak by name, in any language the data has, and ignores case and accents. Before, the list stopped at 40 peaks and could not be searched.
+- A summit that the bundled list had twice, such as Kranzberg near the Jungfrau, now shows one label.
+- The notice under the place chip says so when the cause is that you are offline, instead of blaming OpenStreetMap.
+- Dropped the French Overpass mirror, which now answers only to allow listed sites and made every lookup waste a slot.
+
 ## 0.1.2
 
 - The page now opens on the Rigi Kulm looking at the Bernese Alps, the same view as the README, instead of a hazy Tokyo horizon where Mount Fuji was a few pixels tall.

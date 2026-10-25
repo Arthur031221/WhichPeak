@@ -48,4 +48,4 @@ The model assumes a lens of 26 mm in 35 mm equivalent unless the file says other
 
 ## Tests
 
-97 unit tests and 10 browser tests. The browser tests run against a synthetic terrain with two cones, so they are deterministic and need no network.
+105 unit tests and 12 browser tests. The browser tests run against a synthetic terrain with two cones, so they are deterministic and need no network.

@@ -70,7 +70,7 @@ describe("fetchPeaks", () => {
     expect(result.source).toBe("bundled");
     expect(result.peaks).toHaveLength(2);
     const mirrors = fetchMock.mock.calls.filter(([u]) => !String(u).includes("peaks.json"));
-    expect(mirrors).toHaveLength(4);
+    expect(mirrors).toHaveLength(3);
   });
 
   it("uses the next mirror when the first one fails", async () => {

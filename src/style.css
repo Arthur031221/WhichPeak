@@ -548,7 +548,8 @@ input[type="range"] {
 }
 input[type="date"],
 input[type="time"],
-input[type="number"] {
+input[type="number"],
+.peak-filter {
   height: 38px;
   min-width: 0;
   padding: 0 10px;
@@ -666,6 +667,14 @@ input[type="number"] {
   color: var(--muted);
 }
 
+.peak-filter {
+  width: 100%;
+  color: var(--text);
+}
+.peak-filter:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
 .peak-list {
   display: grid;
   margin: 0;

@@ -227,3 +227,59 @@ describe("photo mode", () => {
     await context.close();
   });
 });
+
+describe("peak filter", () => {
+  it("finds a peak by name among every visible peak and says so when nothing matches", async () => {
+    const { page, context } = await newPage(browser);
+    await page.goto(viewUrl(base, HASH));
+    await sceneReady(page);
+    await page.fill("#peak-filter", "side fix");
+    await expect.poll(() => page.locator("#peak-list button").count()).toBe(1);
+    expect(await page.locator("#peak-list button").innerText()).toContain("Side Fixture");
+    await page.fill("#peak-filter", "zzz");
+    await expect.poll(() => page.locator("#peak-list button").count()).toBe(0);
+    expect(await page.locator("#peak-empty").isVisible()).toBe(true);
+    await page.fill("#peak-filter", "");
+    await expect.poll(() => page.locator("#peak-list button").count()).toBe(2);
+    await context.close();
+  });
+});
+
+describe("offline", () => {
+  it("opens the page from the service worker cache after one visit", async () => {
+    const { build, preview } = await import("vite");
+    const { mkdtempSync, rmSync } = await import("node:fs");
+    const { tmpdir } = await import("node:os");
+    const outDir = mkdtempSync(`${tmpdir()}/whichpeak-dist-`);
+    // Vitest sets NODE_ENV to test, which would leave the service worker out of the built page.
+    const mode = process.env.NODE_ENV;
+    process.env.NODE_ENV = "production";
+    try {
+      await build({ logLevel: "silent", build: { outDir, emptyOutDir: true } });
+    } finally {
+      process.env.NODE_ENV = mode;
+    }
+    const site = await preview({
+      logLevel: "error",
+      build: { outDir },
+      preview: { port: 0, host: "127.0.0.1" },
+    });
+    try {
+      const address = site.httpServer.address();
+      if (!address || typeof address === "string") throw new Error("No preview address");
+      const { page, context } = await newPage(browser);
+      await page.goto(viewUrl(`http://127.0.0.1:${address.port}/`, HASH));
+      await sceneReady(page);
+      await page.evaluate(() => navigator.serviceWorker.ready);
+      await page.waitForFunction(() => navigator.serviceWorker.controller !== null);
+      await context.setOffline(true);
+      await page.reload();
+      await page.waitForSelector("#search-input");
+      expect(await page.locator("#tab-los").isVisible()).toBe(true);
+      await context.close();
+    } finally {
+      await site.close();
+      rmSync(outDir, { recursive: true, force: true });
+    }
+  });
+});

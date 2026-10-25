@@ -14,6 +14,8 @@ Controls in the side panel:
 | Time       | The moment used for the sun, so shading and haze match a real hour.    |
 | Hidden     | Show peaks that are behind terrain as faint ghost labels.              |
 
+The list of visible peaks in the side panel has a search box above it. Type part of a name, in any language the data has, and it searches every visible peak instead of only the 40 that matter most. Click a result to turn toward it and open its card.
+
 ## Line of sight
 
 Switch to line of sight, click a second point on the map, and read the chart. The profile includes earth curvature and refraction. The result says whether the two points see each other and, if not, where the ridge that blocks them is.

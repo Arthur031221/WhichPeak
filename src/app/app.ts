@@ -1,6 +1,6 @@
 import { bearing, distance } from "../core/geodesy";
 import type { LosResult } from "../core/los";
-import { type Peak, peakName } from "../core/peaks";
+import { type Peak, peakMatches, peakName } from "../core/peaks";
 import { dayEvents, dayPath, moonPosition, sunPosition } from "../core/sun";
 import type { PeakView } from "../core/visibility";
 import {
@@ -399,7 +399,7 @@ export class App {
       await this.evaluate(seq);
       if (seq !== this.loadSeq) return;
       if (r.source === "bundled" && r.peaks.length > 0)
-        this.flash(this.t("status.peaksBundled"), 0);
+        this.flash(this.t(navigator.onLine ? "status.peaksBundled" : "status.peaksOffline"), 0);
       else $("#status-chip").hidden = true;
     };
     const peaksPromise = fetchPeaks(s.lat, s.lon, s.range * 1000, signal, (r) => {
@@ -622,15 +622,20 @@ export class App {
   private renderPeakList(): void {
     const list = document.getElementById("peak-list");
     if (!list) return;
-    const shown = this.views
-      .filter((v) => v.visible)
+    const query = (document.getElementById("peak-filter") as HTMLInputElement | null)?.value ?? "";
+    const matching = this.views
+      .filter((v) => v.visible && peakMatches(v.peak, query))
       .sort(
         (a, b) =>
           peakPriority(b, this.state.range * 1000) - peakPriority(a, this.state.range * 1000),
-      )
-      .slice(0, 40);
+      );
+    // A search looks through every visible peak, the plain list stops at the 40 that matter most.
+    const shown = query.trim() ? matching : matching.slice(0, 40);
     const empty = document.getElementById("peak-empty");
-    if (empty) empty.hidden = shown.length > 0;
+    if (empty) {
+      empty.hidden = shown.length > 0;
+      empty.textContent = this.t(query.trim() ? "peaks.noMatch" : "peaks.empty");
+    }
     list.replaceChildren(
       ...shown.map((v) =>
         h(
@@ -933,6 +938,15 @@ export class App {
       ghosts.root,
       h("div", { class: "field-head" }, h("span", {}, t("units.label")), units.root),
       h("p", { class: "section-title" }, t("peaks.title")),
+      h("input", {
+        type: "search",
+        id: "peak-filter",
+        class: "peak-filter",
+        placeholder: t("peaks.filter"),
+        "aria-label": t("peaks.filter"),
+        autocomplete: "off",
+        oninput: () => this.renderPeakList(),
+      }),
       h("ul", { class: "peak-list", id: "peak-list" }),
       h("p", { class: "note", id: "peak-empty" }, t("peaks.empty")),
       h(

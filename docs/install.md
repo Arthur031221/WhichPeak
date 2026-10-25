@@ -6,6 +6,8 @@ WhichPeak is a static site. It has no server and no account, so you can use the 
 
 Open https://arthur031221.github.io/WhichPeak/. Nothing is installed.
 
+After one visit the page also opens without a network, and the terrain it already drew is kept for the next time. Use the install option of your browser to add it to a home screen or desktop. Place search, new peak names and the map still need a connection. Without one, the names come from the bundled list.
+
 ## Run from source
 
 You need Node.js 20.19 or 22.12 and newer.

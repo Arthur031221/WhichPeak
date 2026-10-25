@@ -70,7 +70,9 @@
   },
   "peaks": {
     "title": "Picos visíveis",
-    "empty": "Ainda não há picos com nome à vista."
+    "empty": "Ainda não há picos com nome à vista.",
+    "filter": "Procurar um pico à vista",
+    "noMatch": "Nenhum pico visível corresponde."
   },
   "card": {
     "visible": "Visível",
@@ -113,7 +115,8 @@
     "located": "Movido para a sua posição",
     "noGeo": "Este navegador não tem serviço de localização",
     "geoDenied": "O acesso à localização não foi concedido",
-    "peaksBundled": "O OpenStreetMap está sobrecarregado, então estes nomes vêm da lista incluída de picos notáveis."
+    "peaksBundled": "O OpenStreetMap está sobrecarregado, então estes nomes vêm da lista incluída de picos notáveis.",
+    "peaksOffline": "Você está sem conexão, então estes nomes vêm da lista incluída de picos notáveis."
   },
   "error": {
     "terrain": {

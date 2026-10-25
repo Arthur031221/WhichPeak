@@ -70,7 +70,9 @@
   },
   "peaks": {
     "title": "Sichtbare Gipfel",
-    "empty": "Noch keine benannten Gipfel in Sicht."
+    "empty": "Noch keine benannten Gipfel in Sicht.",
+    "filter": "Gipfel in Sicht suchen",
+    "noMatch": "Kein sichtbarer Gipfel passt."
   },
   "card": {
     "visible": "Sichtbar",
@@ -113,7 +115,8 @@
     "located": "Zu deinem Standort verschoben",
     "noGeo": "Dieser Browser hat keinen Standortdienst",
     "geoDenied": "Der Zugriff auf den Standort wurde nicht erlaubt",
-    "peaksBundled": "OpenStreetMap ist überlastet, deshalb stammen diese Namen aus der mitgelieferten Liste bekannter Gipfel."
+    "peaksBundled": "OpenStreetMap ist überlastet, deshalb stammen diese Namen aus der mitgelieferten Liste bekannter Gipfel.",
+    "peaksOffline": "Du bist offline, deshalb stammen diese Namen aus der mitgelieferten Liste bekannter Gipfel."
   },
   "error": {
     "terrain": {

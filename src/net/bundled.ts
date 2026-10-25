@@ -1,5 +1,5 @@
 import { distance } from "../core/geodesy";
-import type { Peak } from "../core/peaks";
+import { type Peak, dropDuplicates } from "../core/peaks";
 
 type Row = [number, number, number, number, string, Record<string, string>?];
 
@@ -37,7 +37,7 @@ export async function bundledPeaks(
     for (const [tag, value] of Object.entries(names ?? {})) tags[`name:${tag}`] = value;
     out.push({ id: -q, lat: pLat, lon: pLon, ele, names: tags, notable: true });
   }
-  return out;
+  return dropDuplicates(out);
 }
 
 /** Link to the record a peak came from: OpenStreetMap for positive ids, Wikidata for the bundled ones. */

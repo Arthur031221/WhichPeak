@@ -1,3 +1,5 @@
+import { distance } from "./geodesy";
+
 export interface Peak {
   id: number;
   lat: number;
@@ -74,6 +76,34 @@ const NAME_KEYS: Record<string, string[]> = {
 export function peakName(peak: Peak, locale: string): string {
   for (const key of NAME_KEYS[locale] ?? []) if (peak.names[key]) return peak.names[key];
   return peak.names.name ?? peak.names["name:en"] ?? "";
+}
+
+/** Lowercase with accents removed, so "zurich" finds "Zürich". */
+export function fold(text: string): string {
+  return text.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+}
+
+/** True when the query is part of the peak's name in any language the data carries. Empty matches all. */
+export function peakMatches(peak: Peak, query: string): boolean {
+  const q = fold(query.trim());
+  return !q || Object.values(peak.names).some((n) => fold(n).includes(q));
+}
+
+/**
+ * Drops the second record of a summit that the data lists twice: the same name within `withinM`.
+ * The record with more translated names stays, since it is the better described one.
+ */
+export function dropDuplicates(peaks: Peak[], withinM = 1500): Peak[] {
+  const richness = (p: Peak) => Object.keys(p.names).length + (p.ele === null ? 0 : 0.5);
+  const kept = new Map<string, Peak[]>();
+  const out = new Set(peaks);
+  for (const p of [...peaks].sort((a, b) => richness(b) - richness(a))) {
+    const key = fold(p.names.name ?? "");
+    const same = key ? (kept.get(key) ?? []) : [];
+    if (same.some((q) => distance(p.lat, p.lon, q.lat, q.lon) < withinM)) out.delete(p);
+    else if (key) kept.set(key, [...same, p]);
+  }
+  return peaks.filter((p) => out.has(p));
 }
 
 export interface Bounds {

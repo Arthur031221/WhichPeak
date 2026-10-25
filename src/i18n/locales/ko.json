@@ -1,0 +1,150 @@
+{
+  "language": {
+    "label": "언어"
+  },
+  "search": {
+    "label": "장소 검색",
+    "placeholder": "장소를 검색하거나 좌표를 붙여넣으세요",
+    "searching": "검색 중...",
+    "none": "장소를 찾지 못했습니다",
+    "failed": "지금은 검색을 사용할 수 없습니다"
+  },
+  "actions": {
+    "locate": "내 위치 사용",
+    "share": "이 전망의 링크 복사",
+    "theme": "라이트와 다크 전환",
+    "zoomIn": "확대",
+    "zoomOut": "축소",
+    "close": "닫기",
+    "retry": "다시 시도",
+    "savePng": "파노라마를 PNG로 저장"
+  },
+  "tabs": {
+    "panorama": "파노라마",
+    "los": "시선",
+    "photo": "사진"
+  },
+  "hint": {
+    "drag": "드래그해서 둘러보고, 스크롤로 확대합니다"
+  },
+  "map": {
+    "label": "지도",
+    "note": "지도를 클릭하거나 핀을 드래그해서 관측 지점을 옮깁니다."
+  },
+  "panorama": {
+    "aria": "산 이름이 표시된 수평선 파노라마"
+  },
+  "compass": {
+    "N": "북",
+    "E": "동",
+    "S": "남",
+    "W": "서"
+  },
+  "chip": {
+    "eye": "눈높이 {height}"
+  },
+  "controls": {
+    "viewpoint": "관측 지점",
+    "light": "빛",
+    "display": "표시",
+    "range": "범위",
+    "rangeHelp": "수평선을 계산하는 거리입니다.",
+    "eye": "눈높이",
+    "eyeHelp": "지면에서의 높이입니다. 탑이나 정상의 높이를 넣으면 그곳에서 바라본 모습이 됩니다.",
+    "refraction": "대기 굴절",
+    "refractionHelp": "0.13이 일반적인 평균값입니다. 0이면 순수한 기하입니다.",
+    "date": "날짜",
+    "time": "시간",
+    "solarClock": "태양시, {zone}",
+    "sunrise": "일출",
+    "goldenHour": "골든아워",
+    "sunset": "일몰",
+    "now": "지금",
+    "noEvent": "이 날짜에 이곳에서는 태양이 그렇게 움직이지 않습니다",
+    "ghosts": "지형에 가려진 산도 표시"
+  },
+  "units": {
+    "label": "단위",
+    "metric": "미터법",
+    "imperial": "야드파운드법"
+  },
+  "peaks": {
+    "title": "보이는 산",
+    "empty": "시야에 이름 있는 산이 아직 없습니다."
+  },
+  "card": {
+    "visible": "보임",
+    "hidden": "지형에 가려짐",
+    "elevation": "해발 고도",
+    "distance": "거리",
+    "bearing": "방위",
+    "angle": "수평선 위 고도각",
+    "clearance": "지형보다 높은 정도",
+    "hiddenBy": "가려지는 지점",
+    "sightline": "시선"
+  },
+  "los": {
+    "intro": "지도를 클릭해 목표를 놓으세요. 판정에는 파노라마와 같은 지형, 지구 곡률, 굴절을 사용합니다.",
+    "pick": "아직 목표가 없습니다. 지도를 클릭하세요.",
+    "visible": "보임",
+    "blocked": "가려짐",
+    "clearBy": "{at}에서 시선이 지형보다 {meters} 위로 지나갑니다.",
+    "blockedBy": "{at}에서 지형이 시선보다 {meters} 높습니다.",
+    "open": "두 지점 사이를 가로막는 것이 없습니다.",
+    "targetHeight": "목표의 지상 높이",
+    "targetHeightHelp": "0이면 지면 자체를 확인합니다. 산을 목표로 하면 정상 높이를 사용합니다.",
+    "distance": "거리",
+    "bearing": "방위",
+    "eyeAlt": "눈의 해발 고도",
+    "targetAlt": "목표의 해발 고도",
+    "angle": "목표의 고도각",
+    "limiting": "가장 빠듯한 지형",
+    "chart": "관측 지점과 목표 사이의 지형 단면",
+    "chartEye": "나",
+    "chartTarget": "목표",
+    "chartLimit": "가장 빠듯한 지점"
+  },
+  "status": {
+    "loadingTerrain": "지형을 불러오는 중...",
+    "refining": "세부를 더하는 중...",
+    "peaksFailed": "산 이름을 불러오지 못했습니다. 지형은 그대로 실제 데이터입니다.",
+    "copied": "링크를 복사했습니다",
+    "locating": "내 위치를 찾는 중...",
+    "located": "내 위치로 이동했습니다",
+    "noGeo": "이 브라우저에는 위치 서비스가 없습니다",
+    "geoDenied": "위치 접근이 허용되지 않았습니다",
+    "peaksBundled": "OpenStreetMap이 바빠서, 이 이름들은 내장된 주요 산 목록에서 가져왔습니다."
+  },
+  "error": {
+    "terrain": {
+      "title": "지형을 불러오지 못했습니다",
+      "body": "고도 타일이 도착하지 않았습니다({reason}). 연결을 확인하고 다시 시도하세요."
+    }
+  },
+  "footer": {
+    "data": "지형: AWS Terrain Tiles. 산과 지도: OpenStreetMap."
+  },
+  "photo": {
+    "intro": "능선이 보이는 사진을 넣으세요. 능선을 따라 그리고 지형에 맞춘 뒤 산 이름을 붙입니다. 사진은 업로드되지 않습니다.",
+    "drop": "사진을 선택하거나 여기에 놓으세요",
+    "dropHint": "JPEG, PNG, WebP를 지원합니다. 파일에 GPS와 방향이 있으면 사용합니다.",
+    "canvasLabel": "지형 윤곽과 산 이름을 겹친 사진",
+    "needsLocation": "이 사진에는 GPS 위치가 없습니다. 지도를 클릭해 촬영 장소를 알려 주세요.",
+    "waiting": "사진 주변의 지형을 기다리는 중...",
+    "aligning": "능선을 맞추는 중...",
+    "matched": "일치했습니다. 능선과 지형의 평균 차이는 {gap}도입니다.",
+    "weak": "일치가 약합니다. 평균 차이는 {gap}도입니다. 지도의 위치를 확인하거나 슬라이더로 조정하세요.",
+    "unreadable": "이 파일은 이미지로 읽을 수 없습니다",
+    "adjust": "미세 조정",
+    "heading": "방향",
+    "pitch": "기울임",
+    "roll": "회전",
+    "zoom": "확대",
+    "outline": "지형 윤곽 표시",
+    "rematch": "다시 맞추기",
+    "reset": "슬라이더 초기화",
+    "save": "JPEG로 저장",
+    "remove": "사진 제거",
+    "credit": "WhichPeak, 지형은 AWS Terrain Tiles"
+  }
+}

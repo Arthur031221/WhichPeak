@@ -1,0 +1,150 @@
+{
+  "language": {
+    "label": "言語"
+  },
+  "search": {
+    "label": "場所を検索",
+    "placeholder": "場所を検索、または座標を貼り付け",
+    "searching": "検索中...",
+    "none": "場所が見つかりません",
+    "failed": "現在、検索を利用できません"
+  },
+  "actions": {
+    "locate": "現在地を使う",
+    "share": "この眺めのリンクをコピー",
+    "theme": "ライトとダークを切り替え",
+    "zoomIn": "拡大",
+    "zoomOut": "縮小",
+    "close": "閉じる",
+    "retry": "もう一度試す",
+    "savePng": "パノラマを PNG で保存"
+  },
+  "tabs": {
+    "panorama": "パノラマ",
+    "los": "視線",
+    "photo": "写真"
+  },
+  "hint": {
+    "drag": "ドラッグで見回し、スクロールでズーム"
+  },
+  "map": {
+    "label": "地図",
+    "note": "地図をクリックするかピンをドラッグして、観測点を動かします。"
+  },
+  "panorama": {
+    "aria": "山名を付けた水平線のパノラマ"
+  },
+  "compass": {
+    "N": "北",
+    "E": "東",
+    "S": "南",
+    "W": "西"
+  },
+  "chip": {
+    "eye": "目の高さ {height}"
+  },
+  "controls": {
+    "viewpoint": "観測点",
+    "light": "光",
+    "display": "表示",
+    "range": "範囲",
+    "rangeHelp": "水平線を計算する距離です。",
+    "eye": "目の高さ",
+    "eyeHelp": "地面からの高さです。塔や山頂の高さを入れると、そこからの眺めになります。",
+    "refraction": "大気差",
+    "refractionHelp": "0.13 が一般的な平均値です。0 にすると純粋な幾何になります。",
+    "date": "日付",
+    "time": "時刻",
+    "solarClock": "太陽時、{zone}",
+    "sunrise": "日の出",
+    "goldenHour": "ゴールデンアワー",
+    "sunset": "日の入り",
+    "now": "現在",
+    "noEvent": "この日、この場所では太陽はそうなりません",
+    "ghosts": "地形に隠れた山も表示"
+  },
+  "units": {
+    "label": "単位",
+    "metric": "メートル法",
+    "imperial": "ヤード・ポンド法"
+  },
+  "peaks": {
+    "title": "見える山",
+    "empty": "視界に名前のある山はまだありません。"
+  },
+  "card": {
+    "visible": "見える",
+    "hidden": "地形に隠れている",
+    "elevation": "標高",
+    "distance": "距離",
+    "bearing": "方位",
+    "angle": "水平線からの仰角",
+    "clearance": "地形との余裕",
+    "hiddenBy": "遮られる地点",
+    "sightline": "視線"
+  },
+  "los": {
+    "intro": "地図をクリックして目標を置きます。判定にはパノラマと同じ地形、地球の曲率、大気差を使います。",
+    "pick": "目標がまだありません。地図をクリックしてください。",
+    "visible": "見える",
+    "blocked": "遮られる",
+    "clearBy": "{at} で視線は地形より {meters} 上を通ります。",
+    "blockedBy": "{at} で地形が視線より {meters} 高くなります。",
+    "open": "2 点の間に遮るものはありません。",
+    "targetHeight": "目標の地上高",
+    "targetHeightHelp": "0 なら地面そのものを調べます。山を目標にすると山頂の高さを使います。",
+    "distance": "距離",
+    "bearing": "方位",
+    "eyeAlt": "目の標高",
+    "targetAlt": "目標の標高",
+    "angle": "目標の仰角",
+    "limiting": "最も厳しい地形",
+    "chart": "観測点と目標の間の地形断面",
+    "chartEye": "あなた",
+    "chartTarget": "目標",
+    "chartLimit": "最も厳しい地点"
+  },
+  "status": {
+    "loadingTerrain": "地形を読み込み中...",
+    "refining": "細部を追加中...",
+    "peaksFailed": "山の名前を読み込めませんでした。地形は実データのままです。",
+    "copied": "リンクをコピーしました",
+    "locating": "現在地を探しています...",
+    "located": "現在地に移動しました",
+    "noGeo": "このブラウザには位置情報サービスがありません",
+    "geoDenied": "位置情報の利用が許可されませんでした",
+    "peaksBundled": "OpenStreetMap が混み合っているため、名前は同梱の主要な山の一覧から表示しています。"
+  },
+  "error": {
+    "terrain": {
+      "title": "地形を読み込めませんでした",
+      "body": "標高タイルが届きませんでした({reason})。接続を確認して、もう一度お試しください。"
+    }
+  },
+  "footer": {
+    "data": "地形: AWS Terrain Tiles。山と地図: OpenStreetMap。"
+  },
+  "photo": {
+    "intro": "稜線の写る写真を入れてください。尾根線をなぞり、地形に合わせて山名を付けます。写真は送信されません。",
+    "drop": "写真を選ぶか、ここにドロップ",
+    "dropHint": "JPEG、PNG、WebP に対応。ファイルに GPS と方位があれば使います。",
+    "canvasLabel": "地形の輪郭と山名を重ねた写真",
+    "needsLocation": "この写真には GPS の位置がありません。地図をクリックして撮影地を指定してください。",
+    "waiting": "写真の周辺の地形を待っています...",
+    "aligning": "稜線を合わせています...",
+    "matched": "一致しました。稜線と地形の平均のずれは {gap} 度です。",
+    "weak": "一致が弱く、平均のずれは {gap} 度です。地図上の位置を確認するか、スライダーで調整してください。",
+    "unreadable": "このファイルは画像として読み込めませんでした",
+    "adjust": "微調整",
+    "heading": "方位",
+    "pitch": "あおり",
+    "roll": "傾き",
+    "zoom": "ズーム",
+    "outline": "地形の輪郭を表示",
+    "rematch": "もう一度合わせる",
+    "reset": "スライダーをリセット",
+    "save": "JPEG で保存",
+    "remove": "写真を外す",
+    "credit": "WhichPeak、地形は AWS Terrain Tiles"
+  }
+}

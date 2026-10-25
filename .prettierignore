@@ -1,0 +1,5 @@
+dist
+public/data
+.cache
+node_modules
+test-results

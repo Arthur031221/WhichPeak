@@ -1,0 +1,150 @@
+{
+  "language": {
+    "label": "Sprache"
+  },
+  "search": {
+    "label": "Ort suchen",
+    "placeholder": "Ort suchen oder Koordinaten einfügen",
+    "searching": "Suche läuft...",
+    "none": "Kein Ort gefunden",
+    "failed": "Die Suche ist gerade nicht verfügbar"
+  },
+  "actions": {
+    "locate": "Meinen Standort verwenden",
+    "share": "Link zu dieser Ansicht kopieren",
+    "theme": "Zwischen hell und dunkel wechseln",
+    "zoomIn": "Vergrößern",
+    "zoomOut": "Verkleinern",
+    "close": "Schließen",
+    "retry": "Erneut versuchen",
+    "savePng": "Panorama als PNG speichern"
+  },
+  "tabs": {
+    "panorama": "Panorama",
+    "los": "Sichtlinie",
+    "photo": "Foto"
+  },
+  "hint": {
+    "drag": "Ziehen zum Umschauen, Scrollen zum Zoomen"
+  },
+  "map": {
+    "label": "Karte",
+    "note": "Klicke auf die Karte oder ziehe die Nadel, um den Standpunkt zu verschieben."
+  },
+  "panorama": {
+    "aria": "Horizontpanorama mit beschrifteten Gipfeln"
+  },
+  "compass": {
+    "N": "N",
+    "E": "O",
+    "S": "S",
+    "W": "W"
+  },
+  "chip": {
+    "eye": "Augenhöhe {height}"
+  },
+  "controls": {
+    "viewpoint": "Standpunkt",
+    "light": "Licht",
+    "display": "Anzeige",
+    "range": "Reichweite",
+    "rangeHelp": "Wie weit der Horizont berechnet wird.",
+    "eye": "Augenhöhe",
+    "eyeHelp": "Über dem Boden. Gib die Höhe eines Turms oder Gipfels an, um von dort zu schauen.",
+    "refraction": "Refraktion",
+    "refractionHelp": "0,13 ist der übliche Mittelwert. 0 ergibt reine Geometrie.",
+    "date": "Datum",
+    "time": "Uhrzeit",
+    "solarClock": "Sonnenzeit, {zone}",
+    "sunrise": "Sonnenaufgang",
+    "goldenHour": "Goldene Stunde",
+    "sunset": "Sonnenuntergang",
+    "now": "Jetzt",
+    "noEvent": "Die Sonne tut das an diesem Datum hier nicht",
+    "ghosts": "Vom Gelände verdeckte Gipfel anzeigen"
+  },
+  "units": {
+    "label": "Einheiten",
+    "metric": "Metrisch",
+    "imperial": "Imperial"
+  },
+  "peaks": {
+    "title": "Sichtbare Gipfel",
+    "empty": "Noch keine benannten Gipfel in Sicht."
+  },
+  "card": {
+    "visible": "Sichtbar",
+    "hidden": "Vom Gelände verdeckt",
+    "elevation": "Höhe",
+    "distance": "Entfernung",
+    "bearing": "Richtung",
+    "angle": "Winkel über dem Horizont",
+    "clearance": "Überragt das Gelände um",
+    "hiddenBy": "Verdeckt bei",
+    "sightline": "Sichtlinie"
+  },
+  "los": {
+    "intro": "Klicke auf die Karte, um ein Ziel zu setzen. Die Prüfung nutzt dasselbe Gelände, dieselbe Erdkrümmung und dieselbe Refraktion wie das Panorama.",
+    "pick": "Noch kein Ziel. Klicke auf die Karte.",
+    "visible": "Sichtbar",
+    "blocked": "Verdeckt",
+    "clearBy": "Die Sichtlinie verläuft bei {at} {meters} über dem Gelände.",
+    "blockedBy": "Bei {at} ragt das Gelände {meters} über die Sichtlinie.",
+    "open": "Zwischen den beiden Punkten liegt nichts.",
+    "targetHeight": "Zielhöhe über dem Boden",
+    "targetHeightHelp": "Null prüft den Boden selbst. Ein Gipfel als Ziel nutzt seine Spitze.",
+    "distance": "Entfernung",
+    "bearing": "Richtung",
+    "eyeAlt": "Augenhöhe über NN",
+    "targetAlt": "Zielhöhe über NN",
+    "angle": "Zielwinkel",
+    "limiting": "Engste Stelle",
+    "chart": "Geländeprofil zwischen Standpunkt und Ziel",
+    "chartEye": "Du",
+    "chartTarget": "Ziel",
+    "chartLimit": "Engste Stelle"
+  },
+  "status": {
+    "loadingTerrain": "Gelände wird geladen...",
+    "refining": "Details werden ergänzt...",
+    "peaksFailed": "Die Gipfelnamen konnten nicht geladen werden. Das Gelände ist trotzdem echt.",
+    "copied": "Link kopiert",
+    "locating": "Dein Standort wird gesucht...",
+    "located": "Zu deinem Standort verschoben",
+    "noGeo": "Dieser Browser hat keinen Standortdienst",
+    "geoDenied": "Der Zugriff auf den Standort wurde nicht erlaubt",
+    "peaksBundled": "OpenStreetMap ist überlastet, deshalb stammen diese Namen aus der mitgelieferten Liste bekannter Gipfel."
+  },
+  "error": {
+    "terrain": {
+      "title": "Das Gelände konnte nicht geladen werden",
+      "body": "Die Höhenkacheln sind nicht angekommen ({reason}). Prüfe deine Verbindung und versuche es erneut."
+    }
+  },
+  "footer": {
+    "data": "Gelände: AWS Terrain Tiles. Gipfel und Karte: OpenStreetMap."
+  },
+  "photo": {
+    "intro": "Lege ein Foto mit einer Gipfellinie ab. Ich zeichne den Grat nach, lege ihn auf das Gelände und beschrifte die Gipfel. Es wird nichts hochgeladen.",
+    "drop": "Foto wählen oder hier ablegen",
+    "dropHint": "JPEG, PNG oder WebP. GPS und Richtung aus der Datei werden genutzt, falls vorhanden.",
+    "canvasLabel": "Dein Foto mit Geländeumriss und Gipfelbeschriftung",
+    "needsLocation": "Dieses Foto hat keine GPS-Position. Klicke auf die Karte, um den Aufnahmeort anzugeben.",
+    "waiting": "Warte auf das Gelände rund um das Foto...",
+    "aligning": "Gratlinie wird angepasst...",
+    "matched": "Angepasst. Die mittlere Abweichung zwischen Grat und Gelände beträgt {gap} Grad.",
+    "weak": "Schwache Übereinstimmung, mittlere Abweichung {gap} Grad. Prüfe die Position auf der Karte oder nutze die Regler.",
+    "unreadable": "Diese Datei konnte nicht als Bild gelesen werden",
+    "adjust": "Feinabstimmung",
+    "heading": "Richtung",
+    "pitch": "Neigung",
+    "roll": "Rollen",
+    "zoom": "Zoom",
+    "outline": "Geländeumriss anzeigen",
+    "rematch": "Erneut anpassen",
+    "reset": "Regler zurücksetzen",
+    "save": "Als JPEG speichern",
+    "remove": "Foto entfernen",
+    "credit": "WhichPeak, Gelände von AWS Terrain Tiles"
+  }
+}

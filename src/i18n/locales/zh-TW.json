@@ -1,0 +1,150 @@
+{
+  "language": {
+    "label": "語言"
+  },
+  "search": {
+    "label": "搜尋地點",
+    "placeholder": "搜尋地點或貼上座標",
+    "searching": "搜尋中...",
+    "none": "找不到這個地點",
+    "failed": "目前無法使用搜尋"
+  },
+  "actions": {
+    "locate": "使用我的位置",
+    "share": "複製此視角的連結",
+    "theme": "切換淺色與深色",
+    "zoomIn": "放大",
+    "zoomOut": "縮小",
+    "close": "關閉",
+    "retry": "再試一次",
+    "savePng": "將全景存成 PNG"
+  },
+  "tabs": {
+    "panorama": "全景",
+    "los": "視線",
+    "photo": "照片"
+  },
+  "hint": {
+    "drag": "拖曳環顧四周，滾輪縮放"
+  },
+  "map": {
+    "label": "地圖",
+    "note": "點擊地圖或拖曳圖釘來移動觀測點。"
+  },
+  "panorama": {
+    "aria": "標註山名的地平線全景"
+  },
+  "compass": {
+    "N": "北",
+    "E": "東",
+    "S": "南",
+    "W": "西"
+  },
+  "chip": {
+    "eye": "眼高 {height}"
+  },
+  "controls": {
+    "viewpoint": "觀測點",
+    "light": "光線",
+    "display": "顯示",
+    "range": "範圍",
+    "rangeHelp": "地平線計算的遠度。",
+    "eye": "眼睛高度",
+    "eyeHelp": "距地面的高度。輸入塔或山頂的高度，就能從那裡眺望。",
+    "refraction": "大氣折射",
+    "refractionHelp": "0.13 是常用的平均值，0 則是純幾何。",
+    "date": "日期",
+    "time": "時間",
+    "solarClock": "太陽時間，{zone}",
+    "sunrise": "日出",
+    "goldenHour": "黃金時刻",
+    "sunset": "日落",
+    "now": "現在",
+    "noEvent": "這一天在此地沒有這個現象",
+    "ghosts": "顯示被地形擋住的山峰"
+  },
+  "units": {
+    "label": "單位",
+    "metric": "公制",
+    "imperial": "英制"
+  },
+  "peaks": {
+    "title": "可見山峰",
+    "empty": "視野內還沒有具名山峰。"
+  },
+  "card": {
+    "visible": "可見",
+    "hidden": "被地形擋住",
+    "elevation": "海拔",
+    "distance": "距離",
+    "bearing": "方位",
+    "angle": "地平線以上的仰角",
+    "clearance": "高出地形",
+    "hiddenBy": "被擋在",
+    "sightline": "視線"
+  },
+  "los": {
+    "intro": "點擊地圖放置目標。檢查使用與全景相同的地形、地球曲率與折射。",
+    "pick": "尚未設定目標。請點擊地圖。",
+    "visible": "可見",
+    "blocked": "被擋住",
+    "clearBy": "視線在 {at} 處高出地形 {meters}。",
+    "blockedBy": "在 {at} 處，地形比視線高出 {meters}。",
+    "open": "兩點之間沒有任何阻擋。",
+    "targetHeight": "目標離地高度",
+    "targetHeightHelp": "填 0 就是檢查地面本身。選擇山峰作為目標時會使用山頂高度。",
+    "distance": "距離",
+    "bearing": "方位",
+    "eyeAlt": "眼睛海拔",
+    "targetAlt": "目標海拔",
+    "angle": "目標仰角",
+    "limiting": "最緊的地形",
+    "chart": "觀測點與目標之間的地形剖面",
+    "chartEye": "你",
+    "chartTarget": "目標",
+    "chartLimit": "最緊的位置"
+  },
+  "status": {
+    "loadingTerrain": "正在載入地形...",
+    "refining": "正在補上細節...",
+    "peaksFailed": "無法載入山名。地形仍然是真實的。",
+    "copied": "已複製連結",
+    "locating": "正在尋找你的位置...",
+    "located": "已移到你的位置",
+    "noGeo": "這個瀏覽器沒有定位服務",
+    "geoDenied": "未取得定位權限",
+    "peaksBundled": "OpenStreetMap 目前忙碌，這些名稱來自內建的知名山峰清單。"
+  },
+  "error": {
+    "terrain": {
+      "title": "無法載入地形",
+      "body": "高程圖磚沒有送達({reason})。請檢查網路後再試一次。"
+    }
+  },
+  "footer": {
+    "data": "地形：AWS Terrain Tiles。山峰與地圖：OpenStreetMap。"
+  },
+  "photo": {
+    "intro": "放入一張有天際線的照片。我會描出稜線、對上地形並標出山名。照片不會上傳。",
+    "drop": "選擇照片或拖曳到這裡",
+    "dropHint": "JPEG、PNG 或 WebP。檔案內若有 GPS 與方向，會直接使用。",
+    "canvasLabel": "套上地形輪廓與山名標註的照片",
+    "needsLocation": "這張照片沒有 GPS 位置。請點擊地圖指出拍攝地點。",
+    "waiting": "正在等待照片周圍的地形...",
+    "aligning": "正在比對稜線...",
+    "matched": "已對上。稜線與地形的平均差距是 {gap} 度。",
+    "weak": "對得不夠好，平均差距 {gap} 度。請檢查地圖上的位置，或微調滑桿。",
+    "unreadable": "這個檔案無法當成圖片讀取",
+    "adjust": "微調",
+    "heading": "方向",
+    "pitch": "俯仰",
+    "roll": "傾斜",
+    "zoom": "縮放",
+    "outline": "顯示地形輪廓",
+    "rematch": "重新比對",
+    "reset": "重設滑桿",
+    "save": "存成 JPEG",
+    "remove": "移除照片",
+    "credit": "WhichPeak，地形來自 AWS Terrain Tiles"
+  }
+}

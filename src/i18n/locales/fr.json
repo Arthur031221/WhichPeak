@@ -1,0 +1,150 @@
+{
+  "language": {
+    "label": "Langue"
+  },
+  "search": {
+    "label": "Rechercher un lieu",
+    "placeholder": "Cherchez un lieu ou collez des coordonnées",
+    "searching": "Recherche...",
+    "none": "Aucun lieu trouvé",
+    "failed": "La recherche est indisponible pour le moment"
+  },
+  "actions": {
+    "locate": "Utiliser ma position",
+    "share": "Copier le lien de cette vue",
+    "theme": "Basculer entre clair et sombre",
+    "zoomIn": "Zoom avant",
+    "zoomOut": "Zoom arrière",
+    "close": "Fermer",
+    "retry": "Réessayer",
+    "savePng": "Enregistrer le panorama en PNG"
+  },
+  "tabs": {
+    "panorama": "Panorama",
+    "los": "Ligne de vue",
+    "photo": "Photo"
+  },
+  "hint": {
+    "drag": "Faites glisser pour regarder autour de vous, molette pour zoomer"
+  },
+  "map": {
+    "label": "Carte",
+    "note": "Cliquez sur la carte ou faites glisser l'épingle pour déplacer le point d'observation."
+  },
+  "panorama": {
+    "aria": "Panorama de l'horizon avec les sommets nommés"
+  },
+  "compass": {
+    "N": "N",
+    "E": "E",
+    "S": "S",
+    "W": "O"
+  },
+  "chip": {
+    "eye": "yeux à {height}"
+  },
+  "controls": {
+    "viewpoint": "Point d'observation",
+    "light": "Lumière",
+    "display": "Affichage",
+    "range": "Portée",
+    "rangeHelp": "Jusqu'à quelle distance l'horizon est calculé.",
+    "eye": "Hauteur des yeux",
+    "eyeHelp": "Au-dessus du sol. Saisissez la hauteur d'une tour ou d'un sommet pour regarder depuis là.",
+    "refraction": "Réfraction",
+    "refractionHelp": "0,13 est la moyenne habituelle. 0 donne de la géométrie pure.",
+    "date": "Date",
+    "time": "Heure",
+    "solarClock": "Heure solaire, {zone}",
+    "sunrise": "Lever du soleil",
+    "goldenHour": "Heure dorée",
+    "sunset": "Coucher du soleil",
+    "now": "Maintenant",
+    "noEvent": "Le soleil ne fait pas cela à cette date ici",
+    "ghosts": "Afficher les sommets cachés par le relief"
+  },
+  "units": {
+    "label": "Unités",
+    "metric": "Métriques",
+    "imperial": "Impériales"
+  },
+  "peaks": {
+    "title": "Sommets visibles",
+    "empty": "Aucun sommet nommé en vue pour l'instant."
+  },
+  "card": {
+    "visible": "Visible",
+    "hidden": "Caché par le relief",
+    "elevation": "Altitude",
+    "distance": "Distance",
+    "bearing": "Azimut",
+    "angle": "Angle au-dessus de l'horizon",
+    "clearance": "Dépasse le relief de",
+    "hiddenBy": "Bloqué à",
+    "sightline": "Ligne de vue"
+  },
+  "los": {
+    "intro": "Cliquez sur la carte pour placer une cible. Le calcul utilise le même relief, la même courbure terrestre et la même réfraction que le panorama.",
+    "pick": "Pas encore de cible. Cliquez sur la carte.",
+    "visible": "Visible",
+    "blocked": "Bloquée",
+    "clearBy": "La ligne de vue passe {meters} au-dessus du relief à {at}.",
+    "blockedBy": "À {at}, le relief s'élève de {meters} au-dessus de la ligne de vue.",
+    "open": "Rien ne se trouve entre les deux points.",
+    "targetHeight": "Hauteur de la cible au-dessus du sol",
+    "targetHeightHelp": "Zéro vérifie le sol lui-même. Un sommet pris pour cible utilise son altitude.",
+    "distance": "Distance",
+    "bearing": "Azimut",
+    "eyeAlt": "Altitude des yeux",
+    "targetAlt": "Altitude de la cible",
+    "angle": "Angle de la cible",
+    "limiting": "Relief le plus serré",
+    "chart": "Profil du relief entre le point d'observation et la cible",
+    "chartEye": "Vous",
+    "chartTarget": "Cible",
+    "chartLimit": "Point le plus serré"
+  },
+  "status": {
+    "loadingTerrain": "Chargement du relief...",
+    "refining": "Ajout du détail...",
+    "peaksFailed": "Les noms des sommets n'ont pas pu être chargés. Le relief reste réel.",
+    "copied": "Lien copié",
+    "locating": "Recherche de votre position...",
+    "located": "Déplacé à votre position",
+    "noGeo": "Ce navigateur n'a pas de service de localisation",
+    "geoDenied": "L'accès à la position n'a pas été accordé",
+    "peaksBundled": "OpenStreetMap est surchargé, ces noms viennent donc de la liste intégrée des sommets notables."
+  },
+  "error": {
+    "terrain": {
+      "title": "Le relief n'a pas pu être chargé",
+      "body": "Les tuiles d'altitude ne sont pas arrivées ({reason}). Vérifiez votre connexion et réessayez."
+    }
+  },
+  "footer": {
+    "data": "Relief : AWS Terrain Tiles. Sommets et carte : OpenStreetMap."
+  },
+  "photo": {
+    "intro": "Déposez une photo avec une ligne de crêtes. Je trace la crête, je l'ajuste au relief et je nomme les sommets. Rien n'est envoyé.",
+    "drop": "Choisissez une photo ou déposez-la ici",
+    "dropHint": "JPEG, PNG ou WebP. Le GPS et la direction du fichier sont utilisés s'ils existent.",
+    "canvasLabel": "Votre photo avec le contour du relief et les noms des sommets",
+    "needsLocation": "Cette photo n'a pas de position GPS. Cliquez sur la carte pour indiquer où elle a été prise.",
+    "waiting": "En attente du relief autour de la photo...",
+    "aligning": "Ajustement de la ligne de crête...",
+    "matched": "Ajustée. L'écart moyen entre la crête et le relief est de {gap} degrés.",
+    "weak": "Ajustement faible, écart moyen de {gap} degrés. Vérifiez la position sur la carte ou réglez les curseurs.",
+    "unreadable": "Ce fichier n'a pas pu être lu comme une image",
+    "adjust": "Réglage fin",
+    "heading": "Cap",
+    "pitch": "Inclinaison",
+    "roll": "Roulis",
+    "zoom": "Zoom",
+    "outline": "Afficher le contour du relief",
+    "rematch": "Ajuster à nouveau",
+    "reset": "Réinitialiser les curseurs",
+    "save": "Enregistrer en JPEG",
+    "remove": "Retirer la photo",
+    "credit": "WhichPeak, relief d'AWS Terrain Tiles"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "language": {
+    "label": "Idioma"
+  },
+  "search": {
+    "label": "Buscar um lugar",
+    "placeholder": "Busque um lugar ou cole coordenadas",
+    "searching": "Buscando...",
+    "none": "Nenhum lugar encontrado",
+    "failed": "A busca está indisponível no momento"
+  },
+  "actions": {
+    "locate": "Usar minha localização",
+    "share": "Copiar o link desta vista",
+    "theme": "Alternar entre claro e escuro",
+    "zoomIn": "Aproximar",
+    "zoomOut": "Afastar",
+    "close": "Fechar",
+    "retry": "Tentar de novo",
+    "savePng": "Salvar o panorama como PNG"
+  },
+  "tabs": {
+    "panorama": "Panorama",
+    "los": "Linha de visada",
+    "photo": "Foto"
+  },
+  "hint": {
+    "drag": "Arraste para olhar ao redor, role para ampliar"
+  },
+  "map": {
+    "label": "Mapa",
+    "note": "Clique no mapa ou arraste o alfinete para mover o ponto de observação."
+  },
+  "panorama": {
+    "aria": "Panorama do horizonte com os picos identificados"
+  },
+  "compass": {
+    "N": "N",
+    "E": "L",
+    "S": "S",
+    "W": "O"
+  },
+  "chip": {
+    "eye": "olhos a {height}"
+  },
+  "controls": {
+    "viewpoint": "Ponto de observação",
+    "light": "Luz",
+    "display": "Exibição",
+    "range": "Alcance",
+    "rangeHelp": "Até que distância o horizonte é calculado.",
+    "eye": "Altura dos olhos",
+    "eyeHelp": "Acima do solo. Use a altura de uma torre ou de um cume para olhar de lá.",
+    "refraction": "Refração",
+    "refractionHelp": "0,13 é a média usual. 0 dá geometria pura.",
+    "date": "Data",
+    "time": "Hora",
+    "solarClock": "Hora solar, {zone}",
+    "sunrise": "Nascer do sol",
+    "goldenHour": "Hora dourada",
+    "sunset": "Pôr do sol",
+    "now": "Agora",
+    "noEvent": "O sol não faz isso nesta data aqui",
+    "ghosts": "Mostrar picos escondidos atrás do terreno"
+  },
+  "units": {
+    "label": "Unidades",
+    "metric": "Métricas",
+    "imperial": "Imperiais"
+  },
+  "peaks": {
+    "title": "Picos visíveis",
+    "empty": "Ainda não há picos com nome à vista."
+  },
+  "card": {
+    "visible": "Visível",
+    "hidden": "Escondido atrás do terreno",
+    "elevation": "Altitude",
+    "distance": "Distância",
+    "bearing": "Rumo",
+    "angle": "Ângulo acima do horizonte",
+    "clearance": "Passa acima do terreno por",
+    "hiddenBy": "Bloqueado a",
+    "sightline": "Linha de visada"
+  },
+  "los": {
+    "intro": "Clique no mapa para colocar um alvo. A verificação usa o mesmo terreno, a mesma curvatura da Terra e a mesma refração do panorama.",
+    "pick": "Ainda não há alvo. Clique no mapa.",
+    "visible": "Visível",
+    "blocked": "Bloqueada",
+    "clearBy": "A linha de visada passa {meters} acima do terreno a {at}.",
+    "blockedBy": "A {at}, o terreno sobe {meters} acima da linha de visada.",
+    "open": "Não há nada entre os dois pontos.",
+    "targetHeight": "Altura do alvo acima do solo",
+    "targetHeightHelp": "Zero verifica o próprio solo. Um pico como alvo usa o seu cume.",
+    "distance": "Distância",
+    "bearing": "Rumo",
+    "eyeAlt": "Altitude dos olhos",
+    "targetAlt": "Altitude do alvo",
+    "angle": "Ângulo do alvo",
+    "limiting": "Terreno mais justo",
+    "chart": "Perfil do terreno entre o ponto de observação e o alvo",
+    "chartEye": "Você",
+    "chartTarget": "Alvo",
+    "chartLimit": "Ponto mais justo"
+  },
+  "status": {
+    "loadingTerrain": "Carregando o terreno...",
+    "refining": "Adicionando detalhes...",
+    "peaksFailed": "Não foi possível carregar os nomes dos picos. O terreno continua real.",
+    "copied": "Link copiado",
+    "locating": "Procurando sua posição...",
+    "located": "Movido para a sua posição",
+    "noGeo": "Este navegador não tem serviço de localização",
+    "geoDenied": "O acesso à localização não foi concedido",
+    "peaksBundled": "O OpenStreetMap está sobrecarregado, então estes nomes vêm da lista incluída de picos notáveis."
+  },
+  "error": {
+    "terrain": {
+      "title": "Não foi possível carregar o terreno",
+      "body": "Os blocos de elevação não chegaram ({reason}). Verifique sua conexão e tente de novo."
+    }
+  },
+  "footer": {
+    "data": "Terreno: AWS Terrain Tiles. Picos e mapa: OpenStreetMap."
+  },
+  "photo": {
+    "intro": "Solte uma foto com uma linha de cumes. Eu traço a crista, ajusto ao terreno e identifico os picos. Nada é enviado.",
+    "drop": "Escolha uma foto ou solte-a aqui",
+    "dropHint": "JPEG, PNG ou WebP. GPS e direção do arquivo são usados quando existem.",
+    "canvasLabel": "Sua foto com o contorno do terreno e os nomes dos picos",
+    "needsLocation": "Esta foto não tem posição GPS. Clique no mapa para indicar onde foi tirada.",
+    "waiting": "Aguardando o terreno ao redor da foto...",
+    "aligning": "Ajustando a linha da crista...",
+    "matched": "Ajustada. A diferença média entre a crista e o terreno é de {gap} graus.",
+    "weak": "Ajuste fraco, diferença média de {gap} graus. Confira a posição no mapa ou use os controles.",
+    "unreadable": "Não foi possível ler este arquivo como imagem",
+    "adjust": "Ajuste fino",
+    "heading": "Rumo",
+    "pitch": "Inclinação",
+    "roll": "Rotação",
+    "zoom": "Zoom",
+    "outline": "Mostrar o contorno do terreno",
+    "rematch": "Ajustar de novo",
+    "reset": "Redefinir controles",
+    "save": "Salvar como JPEG",
+    "remove": "Remover a foto",
+    "credit": "WhichPeak, terreno de AWS Terrain Tiles"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "language": {
+    "label": "Language"
+  },
+  "search": {
+    "label": "Search for a place",
+    "placeholder": "Search a place or paste coordinates",
+    "searching": "Searching...",
+    "none": "No place found",
+    "failed": "Search is unavailable right now"
+  },
+  "actions": {
+    "locate": "Use my location",
+    "share": "Copy link to this view",
+    "theme": "Switch light and dark",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "close": "Close",
+    "retry": "Try again",
+    "savePng": "Save panorama as PNG"
+  },
+  "tabs": {
+    "panorama": "Panorama",
+    "los": "Line of sight",
+    "photo": "Photo"
+  },
+  "hint": {
+    "drag": "Drag to look around, scroll to zoom"
+  },
+  "map": {
+    "label": "Map",
+    "note": "Click the map or drag the pin to move the viewpoint."
+  },
+  "panorama": {
+    "aria": "Labeled panorama of the horizon"
+  },
+  "compass": {
+    "N": "N",
+    "E": "E",
+    "S": "S",
+    "W": "W"
+  },
+  "chip": {
+    "eye": "eye {height}"
+  },
+  "controls": {
+    "viewpoint": "Viewpoint",
+    "light": "Light",
+    "display": "Display",
+    "range": "Range",
+    "rangeHelp": "How far the horizon is computed.",
+    "eye": "Eye height",
+    "eyeHelp": "Above the ground. Use a tower or summit height to look from there.",
+    "refraction": "Refraction",
+    "refractionHelp": "0.13 is the usual average. 0 gives pure geometry.",
+    "date": "Date",
+    "time": "Time",
+    "solarClock": "Solar clock, {zone}",
+    "sunrise": "Sunrise",
+    "goldenHour": "Golden hour",
+    "sunset": "Sunset",
+    "now": "Now",
+    "noEvent": "The sun does not do that on this date here",
+    "ghosts": "Show peaks hidden behind terrain"
+  },
+  "units": {
+    "label": "Units",
+    "metric": "Metric",
+    "imperial": "Imperial"
+  },
+  "peaks": {
+    "title": "Visible peaks",
+    "empty": "No named peaks in view yet."
+  },
+  "card": {
+    "visible": "Visible",
+    "hidden": "Hidden behind terrain",
+    "elevation": "Elevation",
+    "distance": "Distance",
+    "bearing": "Bearing",
+    "angle": "Angle above horizon",
+    "clearance": "Clears the terrain by",
+    "hiddenBy": "Blocked at",
+    "sightline": "Line of sight"
+  },
+  "los": {
+    "intro": "Click the map to place a target. The check uses the same terrain, earth curvature and refraction as the panorama.",
+    "pick": "No target yet. Click the map.",
+    "visible": "Visible",
+    "blocked": "Blocked",
+    "clearBy": "The sight line clears the terrain by {meters} at {at}.",
+    "blockedBy": "Terrain rises {meters} above the sight line at {at}.",
+    "open": "Nothing lies between the two points.",
+    "targetHeight": "Target height above ground",
+    "targetHeightHelp": "Zero checks the ground itself. A peak target uses its summit.",
+    "distance": "Distance",
+    "bearing": "Bearing",
+    "eyeAlt": "Eye altitude",
+    "targetAlt": "Target altitude",
+    "angle": "Target angle",
+    "limiting": "Tightest ground",
+    "chart": "Terrain profile between the viewpoint and the target",
+    "chartEye": "You",
+    "chartTarget": "Target",
+    "chartLimit": "Tightest point"
+  },
+  "status": {
+    "loadingTerrain": "Loading terrain...",
+    "refining": "Adding detail...",
+    "peaksFailed": "Peak names could not be loaded. The terrain is still real.",
+    "copied": "Link copied",
+    "locating": "Finding your position...",
+    "located": "Moved to your position",
+    "noGeo": "This browser has no location service",
+    "geoDenied": "Location access was not granted",
+    "peaksBundled": "OpenStreetMap is busy, so these names come from the bundled list of notable peaks."
+  },
+  "error": {
+    "terrain": {
+      "title": "The terrain could not be loaded",
+      "body": "The elevation tiles did not arrive ({reason}). Check your connection and try again."
+    }
+  },
+  "footer": {
+    "data": "Terrain: AWS Terrain Tiles. Peaks and map: OpenStreetMap."
+  },
+  "photo": {
+    "intro": "Drop a photo of a skyline. I trace the ridge, match it to the terrain and label the peaks. Nothing is uploaded.",
+    "drop": "Choose a photo or drop it here",
+    "dropHint": "JPEG, PNG or WebP. GPS and heading in the file are used when present.",
+    "canvasLabel": "Your photo with the matched terrain outline and peak labels",
+    "needsLocation": "This photo has no GPS position. Click the map to say where it was taken.",
+    "waiting": "Waiting for the terrain around the photo...",
+    "aligning": "Matching the ridge line...",
+    "matched": "Matched. The mean gap between the ridge and the terrain is {gap} degrees.",
+    "weak": "Weak match, mean gap {gap} degrees. Check the position on the map or nudge the sliders.",
+    "unreadable": "This file could not be read as an image",
+    "adjust": "Fine tune",
+    "heading": "Heading",
+    "pitch": "Tilt",
+    "roll": "Roll",
+    "zoom": "Zoom",
+    "outline": "Show terrain outline",
+    "rematch": "Match again",
+    "reset": "Reset sliders",
+    "save": "Save as JPEG",
+    "remove": "Remove photo",
+    "credit": "WhichPeak, terrain from AWS Terrain Tiles"
+  }
+}

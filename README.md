@@ -36,6 +36,7 @@ I didn't want a tool that gives a confident wrong answer, so when it's unsure it
 | Click a label             | Elevation, distance, bearing, angle above the horizon and how far the peak clears the terrain |
 | Switch to line of sight   | A chart of the profile between two points, with the ridge that blocks it                      |
 | Type part of a name       | Every visible peak that matches, ready to turn toward                                         |
+| Hold up your phone        | The view turns with the compass, so you can name the peak you are pointing at                 |
 | Open it with no signal    | The page and the terrain you already loaded, from the offline cache. It installs as an app    |
 | Share the page            | A link that holds the place, view, range and moment                                           |
 
@@ -77,7 +78,7 @@ I checked curvature and refraction the most. A line of sight tool that's off by 
 | Pic de Finestrelles to Pic Gaspard | 443 km   | Blocked by 48 m. Visible from k = 0.145     |
 | Marys Peak to Mount Rainier        | 295.8 km | Visible with 78 m of clearance              |
 
-The first sightline was photographed in 2016 under strong refraction, so blocked at the average setting and open at 0.145 is the answer I expected. The solver leans toward hiding a peak, since one elevation cell is about 76 m wide.
+The first sightline was photographed in 2016 under strong refraction, so blocked at the average setting and open at 0.145 is what I expected. The solver leans toward hiding a peak, since one elevation cell is about 76 m wide.
 
 **Photo mode is experimental.** I ran eight casual photos from the Gornergrat with the place set and no heading given. One matched. The other seven came back flagged as weak matches, and the ones I checked by eye were wrong. Nothing was reported as matched when it was wrong. Use it for photos with a clean skyline and a known place, and nudge the sliders by hand when it misses. All eight results are in [docs/benchmarks.md](docs/benchmarks.md).
 
@@ -97,7 +98,7 @@ The interface comes in English, Traditional Chinese, Simplified Chinese, Japanes
 
 ## Contributing
 
-Bug reports and pull requests are welcome. [CONTRIBUTING.md](CONTRIBUTING.md) lists the checks to run first: 105 unit tests, 12 browser tests, type checking and a format check.
+Bug reports and pull requests are welcome. [CONTRIBUTING.md](CONTRIBUTING.md) lists the checks to run first: 112 unit tests, 15 browser tests, type checking and a format check.
 
 ## Credits
 

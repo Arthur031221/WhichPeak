@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0
+
+- A compass button for phones. Tap it and the panorama turns with the phone, so you can point at a ridge and read its name. It uses the absolute compass, with the tilt of the phone taken into account, and smooths the readings so the view does not shake. Touching the view or picking a peak hands control back. The button only shows on touch devices, and says so when the device has no compass or access was refused.
+- The header fits a 360 px wide phone with the new button, by letting the language picker shrink.
+
 ## 0.2.0
 
 - The page works offline after one visit. A service worker keeps the page and the terrain tiles you already loaded, so a view you opened on the way up still draws on the summit with no signal. It can also be installed as an app, with proper icons.

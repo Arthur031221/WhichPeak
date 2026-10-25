@@ -17,7 +17,8 @@
     "zoomOut": "Afastar",
     "close": "Fechar",
     "retry": "Tentar de novo",
-    "savePng": "Salvar o panorama como PNG"
+    "savePng": "Salvar o panorama como PNG",
+    "compass": "Seguir minha bússola"
   },
   "tabs": {
     "panorama": "Panorama",
@@ -116,7 +117,10 @@
     "noGeo": "Este navegador não tem serviço de localização",
     "geoDenied": "O acesso à localização não foi concedido",
     "peaksBundled": "O OpenStreetMap está sobrecarregado, então estes nomes vêm da lista incluída de picos notáveis.",
-    "peaksOffline": "Você está sem conexão, então estes nomes vêm da lista incluída de picos notáveis."
+    "peaksOffline": "Você está sem conexão, então estes nomes vêm da lista incluída de picos notáveis.",
+    "compassOn": "Gire o celular para olhar ao redor. Toque na vista para parar.",
+    "compassDenied": "O acesso à bússola não foi concedido",
+    "noCompass": "Este aparelho não tem sensor de bússola"
   },
   "error": {
     "terrain": {

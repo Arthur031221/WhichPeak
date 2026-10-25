@@ -36,6 +36,7 @@ No quiero dar una respuesta equivocada con total seguridad, así que cuando la h
 | Pulsar una etiqueta                   | Altitud, distancia, rumbo, ángulo sobre el horizonte y cuánto supera la cima al terreno que la tapa |
 | Cambiar a línea de visión             | Un perfil entre dos puntos, con la cresta que bloquea la vista                                      |
 | Escribir parte de un nombre           | Todos los picos visibles que coinciden, listos para girar hacia ellos                               |
+| Levantar el móvil                     | La vista gira con la brújula y te dice qué pico estás apuntando                                     |
 | Abrirlo sin señal                     | La página y el terreno que ya cargaste, desde la caché sin conexión. Se instala como una app        |
 | Compartir la página                   | Un enlace que guarda el lugar, la vista, el alcance y el momento                                    |
 
@@ -97,7 +98,7 @@ La interfaz está en inglés, chino tradicional, chino simplificado, japonés, c
 
 ## Contribuir
 
-Se agradecen los informes de errores y los pull requests. [CONTRIBUTING.md](CONTRIBUTING.md) explica las comprobaciones que hay que pasar antes: 105 pruebas unitarias, 12 pruebas de navegador, comprobación de tipos y de formato.
+Se agradecen los informes de errores y los pull requests. [CONTRIBUTING.md](CONTRIBUTING.md) explica las comprobaciones que hay que pasar antes: 112 pruebas unitarias, 15 pruebas de navegador, comprobación de tipos y de formato.
 
 ## Créditos
 

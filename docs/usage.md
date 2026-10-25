@@ -2,7 +2,7 @@
 
 ## Panorama
 
-Pick a place by searching, clicking the map, or using your location. Drag the panorama to turn, scroll to change the field of view, and click a label to see the peak's distance, bearing and elevation.
+Pick a place by searching, clicking the map, or using your location. Drag the panorama to turn, scroll to change the field of view, and click a label to see the peak's distance, bearing and elevation. On a phone, the compass button in the header turns the view with the phone. Touch the view to stop. iOS asks for motion access the first time.
 
 Controls in the side panel:
 

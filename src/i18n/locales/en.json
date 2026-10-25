@@ -17,7 +17,8 @@
     "zoomOut": "Zoom out",
     "close": "Close",
     "retry": "Try again",
-    "savePng": "Save panorama as PNG"
+    "savePng": "Save panorama as PNG",
+    "compass": "Follow my compass"
   },
   "tabs": {
     "panorama": "Panorama",
@@ -116,7 +117,10 @@
     "noGeo": "This browser has no location service",
     "geoDenied": "Location access was not granted",
     "peaksBundled": "OpenStreetMap is busy, so these names come from the bundled list of notable peaks.",
-    "peaksOffline": "You are offline, so these names come from the bundled list of notable peaks."
+    "peaksOffline": "You are offline, so these names come from the bundled list of notable peaks.",
+    "compassOn": "Turn your phone to look around. Touch the view to stop.",
+    "compassDenied": "Compass access was not granted",
+    "noCompass": "This device has no compass sensor"
   },
   "error": {
     "terrain": {

@@ -135,6 +135,72 @@ describe("chrome", () => {
   });
 });
 
+describe("compass", () => {
+  const turn = (page: import("playwright").Page, alpha: number) =>
+    page.evaluate(
+      (a) =>
+        window.dispatchEvent(
+          new DeviceOrientationEvent("deviceorientationabsolute", {
+            alpha: a,
+            beta: 90,
+            gamma: 0,
+            absolute: true,
+          }),
+        ),
+      alpha,
+    );
+
+  it("stays out of the way on a desktop", async () => {
+    const { page, context } = await newPage(browser);
+    await page.goto(viewUrl(base, HASH));
+    await sceneReady(page);
+    expect(await page.locator("#btn-compass").isVisible()).toBe(false);
+    await context.close();
+  });
+
+  it("turns the view with the phone and lets go when the view is touched", async () => {
+    const { page, context, errors } = await newPage(browser, {
+      touch: true,
+      viewport: { width: 360, height: 740 },
+    });
+    await page.goto(viewUrl(base, HASH));
+    await sceneReady(page);
+    const button = page.locator("#btn-compass");
+    expect(await button.isVisible()).toBe(true);
+    // Five round buttons and the language picker still fit the narrowest common phone.
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+      ),
+    ).toBeLessThanOrEqual(0);
+    await button.click();
+    await turn(page, 90);
+    await expect
+      .poll(() => page.evaluate(() => location.hash), { timeout: 5000 })
+      .toContain("az=270");
+    expect(await button.getAttribute("aria-pressed")).toBe("true");
+    await page.locator("#panorama-host canvas").dispatchEvent("pointerdown", { pointerId: 1 });
+    expect(await button.getAttribute("aria-pressed")).toBe("false");
+    await turn(page, 180);
+    await page.waitForTimeout(400);
+    expect(await page.evaluate(() => location.hash)).toContain("az=270");
+    expect(errors).toEqual([]);
+    await context.close();
+  });
+
+  it("says so when the device has no compass", async () => {
+    const { page, context } = await newPage(browser, { touch: true });
+    await page.goto(viewUrl(base, HASH));
+    await sceneReady(page);
+    await page.locator("#btn-compass").click();
+    await expect
+      .poll(() => page.locator("#status-chip").innerText(), { timeout: 6000 })
+      .toContain("no compass");
+    expect(await page.locator("#btn-compass").getAttribute("aria-pressed")).toBe("false");
+    await context.close();
+  });
+});
+
 describe("line of sight", () => {
   it("clears the plain to the first hill and is blocked behind it", async () => {
     const { page, context } = await newPage(browser);

@@ -17,7 +17,8 @@
     "zoomOut": "縮小",
     "close": "關閉",
     "retry": "再試一次",
-    "savePng": "將全景存成 PNG"
+    "savePng": "將全景存成 PNG",
+    "compass": "跟隨指南針"
   },
   "tabs": {
     "panorama": "全景",
@@ -116,7 +117,10 @@
     "noGeo": "這個瀏覽器沒有定位服務",
     "geoDenied": "未取得定位權限",
     "peaksBundled": "OpenStreetMap 目前忙碌，這些名稱來自內建的知名山峰清單。",
-    "peaksOffline": "目前離線，這些名稱來自內建的知名山峰清單。"
+    "peaksOffline": "目前離線，這些名稱來自內建的知名山峰清單。",
+    "compassOn": "轉動手機即可環顧四周，觸碰畫面即停止。",
+    "compassDenied": "未取得指南針權限",
+    "noCompass": "這個裝置沒有指南針感測器"
   },
   "error": {
     "terrain": {

@@ -17,7 +17,8 @@
     "zoomOut": "Zoom arrière",
     "close": "Fermer",
     "retry": "Réessayer",
-    "savePng": "Enregistrer le panorama en PNG"
+    "savePng": "Enregistrer le panorama en PNG",
+    "compass": "Suivre ma boussole"
   },
   "tabs": {
     "panorama": "Panorama",
@@ -116,7 +117,10 @@
     "noGeo": "Ce navigateur n'a pas de service de localisation",
     "geoDenied": "L'accès à la position n'a pas été accordé",
     "peaksBundled": "OpenStreetMap est surchargé, ces noms viennent donc de la liste intégrée des sommets notables.",
-    "peaksOffline": "Vous êtes hors ligne, ces noms viennent donc de la liste intégrée des sommets notables."
+    "peaksOffline": "Vous êtes hors ligne, ces noms viennent donc de la liste intégrée des sommets notables.",
+    "compassOn": "Tournez le téléphone pour regarder autour de vous. Touchez la vue pour arrêter.",
+    "compassDenied": "L'accès à la boussole n'a pas été accordé",
+    "noCompass": "Cet appareil n'a pas de capteur de boussole"
   },
   "error": {
     "terrain": {

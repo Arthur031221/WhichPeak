@@ -36,6 +36,7 @@ Não quero dar uma resposta errada com toda a confiança, então quando a ferram
 | Clicar em um rótulo                 | Altitude, distância, azimute, ângulo acima do horizonte e quanto o cume passa do terreno que o encobre |
 | Trocar para linha de visada         | Um perfil entre dois pontos, com a crista que bloqueia a vista                                         |
 | Digitar parte de um nome            | Todos os picos visíveis que combinam, prontos para virar a vista                                       |
+| Levantar o celular                  | A vista gira com a bússola e diz qual pico você está apontando                                         |
 | Abrir sem sinal                     | A página e o relevo que você já carregou, do cache offline. Ela instala como um app                    |
 | Compartilhar a página               | Um link que guarda o lugar, a vista, o alcance e o momento                                             |
 
@@ -97,7 +98,7 @@ A interface está em inglês, chinês tradicional, chinês simplificado, japonê
 
 ## Contribuir
 
-Relatos de erros e pull requests são bem-vindos. O [CONTRIBUTING.md](CONTRIBUTING.md) descreve as verificações a rodar primeiro: 105 testes unitários, 12 testes de navegador, verificação de tipos e de formato.
+Relatos de erros e pull requests são bem-vindos. O [CONTRIBUTING.md](CONTRIBUTING.md) descreve as verificações a rodar primeiro: 112 testes unitários, 15 testes de navegador, verificação de tipos e de formato.
 
 ## Créditos
 

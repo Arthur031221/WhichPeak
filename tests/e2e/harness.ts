@@ -80,6 +80,8 @@ export interface Options {
   colorScheme?: "light" | "dark";
   viewport?: { width: number; height: number };
   locale?: string;
+  /** A phone: coarse pointer and touch, the only place the compass button shows. */
+  touch?: boolean;
 }
 
 /** Opens a page whose network is fully fake: synthetic terrain, two fixture peaks, canned search. */
@@ -91,6 +93,7 @@ export async function newPage(
     viewport: opts.viewport ?? { width: 1280, height: 860 },
     locale: opts.locale ?? "en-US",
     colorScheme: opts.colorScheme ?? "dark",
+    ...(opts.touch ? { isMobile: true, hasTouch: true } : {}),
   });
   const errors: string[] = [];
   const page = await context.newPage();

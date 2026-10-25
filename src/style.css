@@ -231,6 +231,11 @@ select {
 .icon-btn:active {
   transform: scale(0.94);
 }
+.icon-btn[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
 
 .lang select {
   height: 38px;
@@ -860,6 +865,14 @@ input[type="number"],
   .card {
     left: 8px;
     bottom: 48px;
+  }
+}
+
+/* Five round buttons and the language picker only fit a 360 px phone when the picker gives way. */
+@media (max-width: 400px) {
+  .lang select {
+    max-width: 104px;
+    text-overflow: ellipsis;
   }
 }
 

@@ -17,7 +17,8 @@
     "zoomOut": "Verkleinern",
     "close": "Schließen",
     "retry": "Erneut versuchen",
-    "savePng": "Panorama als PNG speichern"
+    "savePng": "Panorama als PNG speichern",
+    "compass": "Meinem Kompass folgen"
   },
   "tabs": {
     "panorama": "Panorama",
@@ -116,7 +117,10 @@
     "noGeo": "Dieser Browser hat keinen Standortdienst",
     "geoDenied": "Der Zugriff auf den Standort wurde nicht erlaubt",
     "peaksBundled": "OpenStreetMap ist überlastet, deshalb stammen diese Namen aus der mitgelieferten Liste bekannter Gipfel.",
-    "peaksOffline": "Du bist offline, deshalb stammen diese Namen aus der mitgelieferten Liste bekannter Gipfel."
+    "peaksOffline": "Du bist offline, deshalb stammen diese Namen aus der mitgelieferten Liste bekannter Gipfel.",
+    "compassOn": "Dreh das Handy, um dich umzusehen. Tippe auf die Ansicht, um zu stoppen.",
+    "compassDenied": "Der Zugriff auf den Kompass wurde nicht erlaubt",
+    "noCompass": "Dieses Gerät hat keinen Kompasssensor"
   },
   "error": {
     "terrain": {

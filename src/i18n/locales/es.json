@@ -17,7 +17,8 @@
     "zoomOut": "Alejar",
     "close": "Cerrar",
     "retry": "Intentar de nuevo",
-    "savePng": "Guardar el panorama como PNG"
+    "savePng": "Guardar el panorama como PNG",
+    "compass": "Seguir mi brújula"
   },
   "tabs": {
     "panorama": "Panorama",
@@ -116,7 +117,10 @@
     "noGeo": "Este navegador no tiene servicio de ubicación",
     "geoDenied": "No se concedió el acceso a la ubicación",
     "peaksBundled": "OpenStreetMap está saturado, así que estos nombres vienen de la lista incluida de picos notables.",
-    "peaksOffline": "Estás sin conexión, así que estos nombres vienen de la lista incluida de picos notables."
+    "peaksOffline": "Estás sin conexión, así que estos nombres vienen de la lista incluida de picos notables.",
+    "compassOn": "Gira el móvil para mirar alrededor. Toca la vista para parar.",
+    "compassDenied": "No se concedió acceso a la brújula",
+    "noCompass": "Este dispositivo no tiene sensor de brújula"
   },
   "error": {
     "terrain": {

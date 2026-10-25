@@ -36,6 +36,7 @@ Ich möchte keine selbstsichere falsche Antwort geben, deshalb sagt das Werkzeug
 | Auf ein Label klicken                    | Höhe, Entfernung, Peilung, Winkel über dem Horizont und wie weit der Gipfel das verdeckende Gelände überragt     |
 | Zur Sichtlinie wechseln                  | Ein Profil zwischen zwei Punkten, mit dem Grat, der die Sicht versperrt                                          |
 | Einen Teil eines Namens tippen           | Jeden sichtbaren Gipfel, der passt, mit einem Klick zum Hindrehen                                                |
+| Das Handy hochhalten                     | Die Ansicht dreht sich mit dem Kompass und nennt den Gipfel, auf den du zeigst                                   |
 | Ohne Empfang öffnen                      | Die Seite und das Gelände, das du schon geladen hast, aus dem Offline-Cache. Sie lässt sich als App installieren |
 | Die Seite teilen                         | Ein Link, der Ort, Blickrichtung, Reichweite und Zeitpunkt enthält                                               |
 
@@ -97,7 +98,7 @@ Die Oberfläche gibt es auf Englisch, Traditionellem Chinesisch, Vereinfachtem C
 
 ## Mitwirken
 
-Fehlerberichte und Pull Requests sind willkommen. [CONTRIBUTING.md](CONTRIBUTING.md) beschreibt die Prüfungen, die du zuerst ausführen solltest: 105 Unit-Tests, 12 Browser-Tests, Typprüfung und Formatprüfung.
+Fehlerberichte und Pull Requests sind willkommen. [CONTRIBUTING.md](CONTRIBUTING.md) beschreibt die Prüfungen, die du zuerst ausführen solltest: 112 Unit-Tests, 15 Browser-Tests, Typprüfung und Formatprüfung.
 
 ## Quellen
 

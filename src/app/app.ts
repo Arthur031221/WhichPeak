@@ -28,6 +28,7 @@ import {
   solarDate,
 } from "../ui/format";
 import { drawProfile } from "../ui/losChart";
+import { CompassFollower } from "../ui/compass";
 import { LocationMap } from "../ui/map";
 import { type LabeledPeak, PanoramaView, peakPriority } from "../ui/panorama";
 import { SceneClient } from "../worker/client";
@@ -75,6 +76,9 @@ export class App {
   private ready = false;
   private controls: Record<string, { set: (v: never) => void }> = {};
   private statusTimer = 0;
+  private compass = new CompassFollower((deg) =>
+    this.pano.setView(deg, this.pano.getView().fov, true),
+  );
 
   constructor() {
     const params = new URLSearchParams(location.search);
@@ -181,6 +185,11 @@ export class App {
     );
     $("#btn-share").addEventListener("click", () => void this.share());
     $("#btn-locate").addEventListener("click", () => this.locate());
+    const follow = $<HTMLButtonElement>("#btn-compass");
+    follow.hidden = !CompassFollower.available();
+    follow.addEventListener("click", () => void this.toggleCompass());
+    // Touching the view takes it back from the compass.
+    $("#panorama-host").addEventListener("pointerdown", () => this.stopCompass());
     $("#zoom-in").addEventListener("click", () => this.zoom(1 / 1.35));
     $("#zoom-out").addEventListener("click", () => this.zoom(1.35));
     for (const tab of document.querySelectorAll<HTMLElement>(".tabs button"))
@@ -266,6 +275,20 @@ export class App {
       () => this.flash(this.t("status.geoDenied")),
       { enableHighAccuracy: false, timeout: 8000 },
     );
+  }
+
+  private async toggleCompass(): Promise<void> {
+    if (this.compass.active) return this.stopCompass();
+    const outcome = await this.compass.start();
+    if (outcome === "on") {
+      $("#btn-compass").setAttribute("aria-pressed", "true");
+      this.flash(this.t("status.compassOn"));
+    } else this.flash(this.t(outcome === "denied" ? "status.compassDenied" : "status.noCompass"));
+  }
+
+  private stopCompass(): void {
+    this.compass.stop();
+    $("#btn-compass").setAttribute("aria-pressed", "false");
   }
 
   private async share(): Promise<void> {
@@ -539,6 +562,7 @@ export class App {
   // Peaks
 
   selectPeak(peak: LabeledPeak | null): void {
+    if (peak) this.stopCompass();
     this.selected = peak;
     this.pano.setSelected(peak ? peak.view.peak.id : null);
     if (!peak) {

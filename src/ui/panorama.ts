@@ -237,6 +237,25 @@ export class PanoramaView {
     });
   }
 
+  /** Chips and zoom buttons drawn over the canvas, in canvas pixels, so labels stay out from under them. */
+  private overlayRects() {
+    const stage = this.canvas.closest(".stage");
+    if (!stage) return [];
+    const origin = this.canvas.getBoundingClientRect();
+    const pad = 4;
+    return [...stage.querySelectorAll<HTMLElement>(".stage-top .chip:not([hidden]), .zoom")].map(
+      (el) => {
+        const r = el.getBoundingClientRect();
+        return {
+          x: r.left - origin.left - pad,
+          y: r.top - origin.top - pad,
+          width: r.width + 2 * pad,
+          height: r.height + 2 * pad,
+        };
+      },
+    );
+  }
+
   private labelAt(e: PointerEvent) {
     const r = this.canvas.getBoundingClientRect();
     const x = e.clientX - r.left;
@@ -414,6 +433,7 @@ export class PanoramaView {
       marginBottom: 46,
       gap: 4,
       limit: Math.max(8, Math.floor(g.w / 38)),
+      obstacles: this.overlayRects(),
     });
     const byId = new Map(candidates.map((c) => [c.view.peak.id, c]));
     this.placements = [];

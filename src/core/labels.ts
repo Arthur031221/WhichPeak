@@ -30,6 +30,8 @@ export interface LayoutOptions {
   gap: number;
   /** Most labels to place. */
   limit: number;
+  /** Screen rectangles that hold other interface, such as chips and buttons. No label is placed over them. */
+  obstacles?: { x: number; y: number; width: number; height: number }[];
 }
 
 function overlaps(a: LabelPlacement, b: LabelPlacement, gap: number): boolean {
@@ -43,11 +45,17 @@ function overlaps(a: LabelPlacement, b: LabelPlacement, gap: number): boolean {
 
 /**
  * Greedy label placement. Each label starts just above its summit and moves up in steps of one
- * label height until it stops colliding with an already placed label. Labels that would leave the
+ * label height until it stops colliding with an already placed label or an obstacle. Labels that would leave the
  * view are dropped, never squeezed.
  */
 export function layoutLabels(items: LabelInput[], o: LayoutOptions): LabelPlacement[] {
   const placed: LabelPlacement[] = [];
+  const blocked = (o.obstacles ?? []).map((r, i) => ({
+    ...r,
+    id: -1 - i,
+    anchorX: r.x,
+    anchorY: r.y,
+  }));
   const order = [...items].sort((a, b) => b.priority - a.priority || a.id - b.id);
   for (const it of order) {
     if (placed.length >= o.limit) break;
@@ -68,7 +76,10 @@ export function layoutLabels(items: LabelInput[], o: LayoutOptions): LabelPlacem
         anchorX: it.x,
         anchorY: it.y,
       };
-      if (!placed.some((p) => overlaps(box, p, o.gap))) {
+      if (
+        !placed.some((p) => overlaps(box, p, o.gap)) &&
+        !blocked.some((p) => overlaps(box, p, 0))
+      ) {
         placed.push(box);
         break;
       }

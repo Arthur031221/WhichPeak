@@ -284,7 +284,12 @@ export class App {
     chip.textContent = text;
     chip.hidden = false;
     clearTimeout(this.statusTimer);
-    if (ms > 0) this.statusTimer = window.setTimeout(() => (chip.hidden = true), ms);
+    if (ms > 0)
+      this.statusTimer = window.setTimeout(() => {
+        chip.hidden = true;
+        this.pano.invalidate();
+      }, ms);
+    this.pano.invalidate();
   }
 
   // State

@@ -38,6 +38,14 @@ describe("layoutLabels", () => {
     expect(placed[0].y).toBeGreaterThan(placed[1].y);
   });
 
+  it("keeps labels out from under an obstacle", () => {
+    const obstacle = { x: 440, y: 255, width: 200, height: 20 };
+    const free = layoutLabels([item(1, 500, 300)], opts);
+    expect(free[0].y + free[0].height).toBeGreaterThan(obstacle.y);
+    const [p] = layoutLabels([item(1, 500, 300)], { ...opts, obstacles: [obstacle] });
+    expect(p.y + p.height).toBeLessThanOrEqual(obstacle.y);
+  });
+
   it("drops labels that would leave the top of the view", () => {
     const placed = layoutLabels([item(1, 500, 60)], opts);
     expect(placed).toHaveLength(0);

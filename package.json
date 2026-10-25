@@ -1,6 +1,6 @@
 {
   "name": "whichpeak",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Name every mountain on the horizon from real terrain data, in your browser",
   "type": "module",
   "license": "MIT",

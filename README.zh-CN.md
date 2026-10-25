@@ -95,7 +95,7 @@ npm run dev
 
 ## 参与贡献
 
-欢迎反馈问题和提交 pull request。[CONTRIBUTING.md](CONTRIBUTING.md) 列出了要先运行的检查：93 个单元测试、10 个浏览器测试、类型检查和格式检查。
+欢迎反馈问题和提交 pull request。[CONTRIBUTING.md](CONTRIBUTING.md) 列出了要先运行的检查：97 个单元测试、10 个浏览器测试、类型检查和格式检查。
 
 ## 数据来源
 

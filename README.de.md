@@ -95,7 +95,7 @@ Die Oberfläche gibt es auf Englisch, Traditionellem Chinesisch, Vereinfachtem C
 
 ## Mitwirken
 
-Fehlerberichte und Pull Requests sind willkommen. [CONTRIBUTING.md](CONTRIBUTING.md) beschreibt die Prüfungen, die du zuerst ausführen solltest: 93 Unit-Tests, 10 Browser-Tests, Typprüfung und Formatprüfung.
+Fehlerberichte und Pull Requests sind willkommen. [CONTRIBUTING.md](CONTRIBUTING.md) beschreibt die Prüfungen, die du zuerst ausführen solltest: 97 Unit-Tests, 10 Browser-Tests, Typprüfung und Formatprüfung.
 
 ## Quellen
 

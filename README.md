@@ -68,7 +68,7 @@ More detail is in [docs/install.md](docs/install.md).
 
 ## How far to trust it
 
-Curvature and refraction got the most checking. A line of sight tool that's off by a few metres is wrong about whether a peak is visible, so I tested it against two sightlines people have documented.
+I checked curvature and refraction the most. A line of sight tool that's off by a few metres is wrong about whether a peak is visible, so I tested it against two sightlines people have documented.
 
 | Sightline                          | Distance | Result at the average refraction (k = 0.13) |
 | ---------------------------------- | -------- | ------------------------------------------- |
@@ -95,7 +95,7 @@ The interface comes in English, Traditional Chinese, Simplified Chinese, Japanes
 
 ## Contributing
 
-Bug reports and pull requests are welcome. [CONTRIBUTING.md](CONTRIBUTING.md) lists the checks to run first: 93 unit tests, 10 browser tests, type checking and a format check.
+Bug reports and pull requests are welcome. [CONTRIBUTING.md](CONTRIBUTING.md) lists the checks to run first: 97 unit tests, 10 browser tests, type checking and a format check.
 
 ## Credits
 

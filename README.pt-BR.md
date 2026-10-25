@@ -95,7 +95,7 @@ A interface está em inglês, chinês tradicional, chinês simplificado, japonê
 
 ## Contribuir
 
-Relatos de erros e pull requests são bem-vindos. O [CONTRIBUTING.md](CONTRIBUTING.md) descreve as verificações a rodar primeiro: 93 testes unitários, 10 testes de navegador, verificação de tipos e de formato.
+Relatos de erros e pull requests são bem-vindos. O [CONTRIBUTING.md](CONTRIBUTING.md) descreve as verificações a rodar primeiro: 97 testes unitários, 10 testes de navegador, verificação de tipos e de formato.
 
 ## Créditos
 

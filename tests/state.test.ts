@@ -15,7 +15,9 @@ describe("location hash", () => {
 
   it("keeps a default view short", () => {
     expect(formatHash(DEFAULT_STATE)).toBe("#lat=35.6586&lon=139.7454&az=250&t=2026-06-21T07:40Z");
-    expect(formatHash(DEMO_STATE)).toContain("eye=150");
+    expect(formatHash(DEMO_STATE)).toBe(
+      "#lat=47.056&lon=8.48609&az=210&fov=70&r=200&eye=6&t=2026-07-10T14:30Z",
+    );
   });
 
   it("clamps out of range values and drops garbage", () => {

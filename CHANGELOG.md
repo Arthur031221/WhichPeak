@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- The page now opens on the Rigi Kulm looking at the Bernese Alps, the same view as the README, instead of a hazy Tokyo horizon where Mount Fuji was a few pixels tall.
+- Peak labels no longer sit under the place chip, the status message or the zoom buttons. They are placed around them, so no name is half hidden at the top of the view.
+
 ## 0.1.1
 
 - Fixed missing peak names outside Switzerland. One Overpass mirror only holds Swiss data and answered with an empty list for other places, which was accepted and kept. That mirror is no longer used, an answer with no peaks falls back to the bundled list and is not stored, and the stored answers from 0.1.0 are cleared. The default Tokyo view now labels Mount Fuji.

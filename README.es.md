@@ -95,7 +95,7 @@ La interfaz está en inglés, chino tradicional, chino simplificado, japonés, c
 
 ## Contribuir
 
-Se agradecen los informes de errores y los pull requests. [CONTRIBUTING.md](CONTRIBUTING.md) explica las comprobaciones que hay que pasar antes: 93 pruebas unitarias, 10 pruebas de navegador, comprobación de tipos y de formato.
+Se agradecen los informes de errores y los pull requests. [CONTRIBUTING.md](CONTRIBUTING.md) explica las comprobaciones que hay que pasar antes: 97 pruebas unitarias, 10 pruebas de navegador, comprobación de tipos y de formato.
 
 ## Créditos
 

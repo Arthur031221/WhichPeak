@@ -95,7 +95,7 @@ L'interface existe en anglais, chinois traditionnel, chinois simplifié, japonai
 
 ## Contribuer
 
-Les rapports de bogues et les pull requests sont les bienvenus. [CONTRIBUTING.md](CONTRIBUTING.md) décrit les vérifications à passer d'abord : 93 tests unitaires, 10 tests de navigateur, vérification des types et du format.
+Les rapports de bogues et les pull requests sont les bienvenus. [CONTRIBUTING.md](CONTRIBUTING.md) décrit les vérifications à passer d'abord : 97 tests unitaires, 10 tests de navigateur, vérification des types et du format.
 
 ## Crédits
 

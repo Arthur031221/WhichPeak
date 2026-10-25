@@ -41,8 +41,17 @@ export const DEFAULT_STATE: ViewState = {
   ghosts: false,
 };
 
-/** What the page opens with when the address carries no place: Tokyo Tower at golden hour, Fuji in the west. */
-export const DEMO_STATE: ViewState = { ...DEFAULT_STATE, eye: 150 };
+/** What the page opens with when the address carries no place: the Rigi Kulm looking at the Bernese Alps, the same view as the README. */
+export const DEMO_STATE: ViewState = {
+  ...DEFAULT_STATE,
+  lat: 47.056,
+  lon: 8.48609,
+  heading: 210,
+  fov: 70,
+  range: 200,
+  eye: 6,
+  time: Date.UTC(2026, 6, 10, 14, 30),
+};
 
 const clamp = (v: number, [lo, hi]: readonly [number, number]) => Math.min(hi, Math.max(lo, v));
 

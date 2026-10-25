@@ -318,8 +318,10 @@ export class App {
   // State
 
   private persistHash(): void {
-    clearTimeout(this.hashTimer);
+    // Throttled rather than debounced, so the link stays current while the view keeps turning.
+    if (this.hashTimer) return;
     this.hashTimer = window.setTimeout(() => {
+      this.hashTimer = 0;
       const hash = formatHash(this.state);
       if (hash !== location.hash) history.replaceState(null, "", hash);
     }, 200);

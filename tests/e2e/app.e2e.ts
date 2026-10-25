@@ -174,9 +174,15 @@ describe("compass", () => {
       ),
     ).toBeLessThanOrEqual(0);
     await button.click();
-    await turn(page, 90);
+    // Newer Chrome asks for sensor permission first, so the listener may arrive a moment after the click.
     await expect
-      .poll(() => page.evaluate(() => location.hash), { timeout: 5000 })
+      .poll(
+        async () => {
+          await turn(page, 90);
+          return page.evaluate(() => location.hash);
+        },
+        { timeout: 5000 },
+      )
       .toContain("az=270");
     expect(await button.getAttribute("aria-pressed")).toBe("true");
     await page.locator("#panorama-host canvas").dispatchEvent("pointerdown", { pointerId: 1 });
